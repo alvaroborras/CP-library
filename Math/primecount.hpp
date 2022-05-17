@@ -45,5 +45,5 @@ struct PrimeCount {
 };
 
 /**
- * @brief Prime Counting function \pi(x)
+ * @brief Prime Counting function \pi(N), number of primes <= N
  */
