@@ -55,6 +55,9 @@ data:
     - icon: ':warning:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/stirling-second.hpp
+      title: Math/stirling-second.hpp
   - name: Template
     pages:
     - icon: ':heavy_check_mark:'
@@ -98,8 +101,14 @@ data:
       path: Verify/LC_aplusb.test.cpp
       title: Verify/LC_aplusb.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/LC_convolution_mod.test.cpp
+      title: Verify/LC_convolution_mod.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_enumerate_primes.test.cpp
       title: Verify/LC_enumerate_primes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_inversion_power_series.test.cpp
+      title: Verify/LC_inversion_power_series.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_partition_function.test.cpp
       title: Verify/LC_partition_function.test.cpp
@@ -112,5 +121,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_stirling_numbers_second_kind.test.cpp
+      title: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: toppage
 ---

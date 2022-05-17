@@ -30,69 +30,51 @@ data:
     \ pb push_back\n#define fi first\n#define se second\n#define inf 2e18\n#define\
     \ eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\ntypedef long long\
     \ ll;\ntypedef unsigned long long ull;\ntypedef pair<ll, ll> P;\n\nconst int mod\
-    \ = 1e9 + 7;\n\ntemplate <class S, class T>\npair<S, T>& operator+=(pair<S, T>&\
-    \ s, const pair<S, T>& t) {\n  s.first += t.first, s.second += t.second;\n  return\
-    \ s;\n}\ntemplate <class S, class T>\npair<S, T>& operator-=(pair<S, T>& s, const\
-    \ pair<S, T>& t) {\n  s.first -= t.first, s.second -= t.second;\n  return s;\n\
-    }\ntemplate <class S, class T>\npair<S, T> operator+(const pair<S, T>& s, const\
-    \ pair<S, T>& t) {\n  return pair<S, T>(s.first + t.first, s.second + t.second);\n\
-    }\ntemplate <class S, class T>\npair<S, T> operator-(const pair<S, T>& s, const\
-    \ pair<S, T>& t) {\n  return pair<S, T>(s.first - t.first, s.second - t.second);\n\
-    }\ntemplate <class T> T dot(const pair<T, T>& s, const pair<T, T>& t) {\n  return\
-    \ s.first * t.first + s.second * t.second;\n}\ntemplate <class T> T cross(const\
-    \ pair<T, T>& s, const pair<T, T>& t) {\n  return s.first * t.second - s.second\
-    \ * t.first;\n}\n\ntemplate <typename T> ostream& operator<<(ostream& os, vector<T>&\
-    \ vec) {\n  reps(i, vec) os << vec[i] << \" \";\n  return os;\n}\ntemplate <typename\
-    \ T> ostream& operator<<(ostream& os, const vector<T>& vec) {\n  reps(i, vec)\
-    \ os << vec[i] << \" \";\n  return os;\n}\ntemplate <typename T> ostream& operator<<(ostream&\
-    \ os, list<T>& ls) {\n  for (auto x : ls)\n    os << x << \" \";\n  return os;\n\
-    }\ntemplate <typename T> ostream& operator<<(ostream& os, const list<T>& ls) {\n\
-    \  for (auto x : ls)\n    os << x << \" \";\n  return os;\n}\ntemplate <typename\
-    \ T> ostream& operator<<(ostream& os, deque<T>& deq) {\n  reps(i, deq) os << deq[i]\
-    \ << \" \";\n  return os;\n}\ntemplate <typename T, typename U>\nostream& operator<<(ostream&\
-    \ os, pair<T, U>& ope) {\n  os << \"(\" << ope.first << \", \" << ope.second <<\
-    \ \")\";\n  return os;\n}\ntemplate <typename T, typename U>\nostream& operator<<(ostream&\
-    \ os, const pair<T, U>& ope) {\n  os << \"(\" << ope.first << \", \" << ope.second\
-    \ << \")\";\n  return os;\n}\ntemplate <typename T, typename U>\nostream& operator<<(ostream&\
-    \ os, map<T, U>& ope) {\n  for (auto p : ope)\n    os << \"(\" << p.first << \"\
-    , \" << p.second << \"),\";\n  return os;\n}\ntemplate <typename T> ostream& operator<<(ostream&\
-    \ os, set<T>& ope) {\n  for (auto x : ope)\n    os << x << \" \";\n  return os;\n\
-    }\ntemplate <typename T> ostream& operator<<(ostream& os, multiset<T>& ope) {\n\
-    \  for (auto x : ope)\n    os << x << \" \";\n  return os;\n}\ntemplate <typename\
-    \ T> void outa(T a[], ll s, ll t) {\n  rep(i, s, t) {\n    cout << a[i];\n   \
-    \ if (i < t)\n      cout << \" \";\n  }\n  cout << nl;\n}\ntemplate <typename\
-    \ T, size_t N>\nostream& operator<<(ostream& os, array<T, N>& arr) {\n  reps(i,\
-    \ arr) os << arr[i] << \" \";\n  return os;\n}\ntemplate <typename T, size_t N>\n\
-    ostream& operator<<(ostream& os, const array<T, N>& arr) {\n  reps(i, arr) os\
-    \ << arr[i] << \" \";\n  return os;\n}\nvoid dump_func() { cout << nl; }\ntemplate\
-    \ <class Head, class... Tail>\nvoid dump_func(Head&& head, Tail &&...tail) {\n\
-    \  cout << head;\n  if (sizeof...(Tail) > 0)\n    cout << \" \";\n  dump_func(std::move(tail)...);\n\
-    }\n#line 1 \"Tools/bigint.hpp\"\n\nstruct bigint {\n  using vll = vector<ll>;\n\
-    \n  inline static constexpr ll base_digits = 9;\n  inline static constexpr ll\
-    \ base = 1000000000;\n\n  vll a;\n  ll sign;\n\n  bigint() :sign(1) {}\n\n  bigint(ll\
-    \ v) { *this = v; }\n\n  bigint(const string& s) { read(s); }\n\n  static bigint\
-    \ add_identity() { return bigint(0); }\n  static bigint mul_identity() { return\
-    \ bigint(1); }\n\n  void operator=(ll v) {\n    sign = 1;\n    if (v < 0) sign\
-    \ = -1, v = -v;\n    for (;v > 0;v = v / base) a.emplace_back(v % base);\n  }\n\
-    \n  bigint operator+(const bigint& v) const {\n    if (sign == v.sign) {\n   \
-    \   bigint res = v;\n      for (ll i = 0, carry = 0;i < (ll)max(a.size(), v.a.size())\
-    \ or carry;++i) {\n        if (i == (ll)res.a.size()) res.a.emplace_back(0);\n\
-    \        res.a[i] += carry + (i < (ll)a.size()?a[i]:0);\n        carry = res.a[i]\
-    \ >= base;\n        if (carry) res.a[i] -= base;\n      }\n      return res;\n\
-    \    }\n    return *this - (-v);\n  }\n\n  bigint operator-(const bigint& v) const\
-    \ {\n    if (sign == v.sign) {\n      if (abs() >= v.abs()) {\n        bigint\
-    \ res = *this;\n        for (ll i = 0, carry = 0;i < (ll)v.a.size() or carry;++i)\
-    \ {\n          res.a[i] -= carry + (i < (ll)v.a.size()?v.a[i]:0);\n          carry\
-    \ = res.a[i] < 0;\n          if (carry) res.a[i] += base;\n        }\n       \
-    \ res.trim();\n        return res;\n      }\n      return -(v - *this);\n    }\n\
-    \    return *this + (-v);\n  }\n\n  void operator*=(ll v) {\n    if (v < 0) sign\
-    \ = -sign, v = -v;\n    for (ll i = 0, carry = 0;i < (ll)a.size() or carry;++i)\
-    \ {\n      if (i == (ll)a.size()) a.emplace_back(0);\n      ll cur = a[i] * (ll)v\
-    \ + carry;\n      carry = (ll)(cur / base);\n      a[i] = (ll)(cur % base);\n\
-    \      // asm(\"divl %%ecx\" : \"=a\"(carry),\"=d\"(a[i]) : \"A\"(cur),\"c\"(base));\n\
-    \    }\n    trim();\n  }\n\n  bigint operator*(ll v) const {\n    bigint res =\
-    \ *this;\n    res *= v;\n    return res;\n  }\n\n  friend pair<bigint, bigint>\
-    \ divmod(const bigint& a1, const bigint& b1) {\n    ll norm = base / (b1.a.back()\
+    \ = 1e9 + 7;\n\ntemplate< typename T1, typename T2 >\nostream& operator<<(ostream&\
+    \ os, const pair< T1, T2 >& p) {\n  os << p.first << \" \" << p.second;\n  return\
+    \ os;\n}\n\ntemplate< typename T1, typename T2 >\nistream& operator>>(istream&\
+    \ is, pair< T1, T2 >& p) {\n  is >> p.first >> p.second;\n  return is;\n}\n\n\
+    template< typename T >\nostream& operator<<(ostream& os, const vector< T >& v)\
+    \ {\n  for (int i = 0; i < (int)v.size(); i++) {\n    os << v[i] << (i + 1 !=\
+    \ v.size()?\" \":\"\");\n  }\n  return os;\n}\n\ntemplate< typename T >\nistream&\
+    \ operator>>(istream& is, vector< T >& v) {\n  for (T& in : v) is >> in;\n  return\
+    \ is;\n}\n\ntemplate< typename T = int64_t >\nvector< T > make_v(size_t a) {\n\
+    \  return vector< T >(a);\n}\n\ntemplate< typename T, typename... Ts >\nauto make_v(size_t\
+    \ a, Ts... ts) {\n  return vector< decltype(make_v< T >(ts...)) >(a, make_v< T\
+    \ >(ts...));\n}\n\ntemplate< typename T, typename V >\ntypename enable_if< is_class<\
+    \ T >::value == 0 >::type fill_v(T& t, const V& v) {\n  t = v;\n}\n\ntemplate<\
+    \ typename T, typename V >\ntypename enable_if< is_class< T >::value != 0 >::type\
+    \ fill_v(T& t, const V& v) {\n  for (auto& e : t) fill_v(e, v);\n}\n\ntemplate<\
+    \ typename F >\nstruct FixPoint : F {\n  explicit FixPoint(F&& f) : F(forward<\
+    \ F >(f)) {}\n\n  template< typename... Args >\n  decltype(auto) operator()(Args\
+    \ &&... args) const {\n    return F::operator()(*this, forward< Args >(args)...);\n\
+    \  }\n};\n\ntemplate< typename F >\ninline decltype(auto) MFP(F&& f) {\n  return\
+    \ FixPoint< F >{forward< F >(f)};\n}\n#line 1 \"Tools/bigint.hpp\"\n\nstruct bigint\
+    \ {\n  using vll = vector<ll>;\n\n  inline static constexpr ll base_digits = 9;\n\
+    \  inline static constexpr ll base = 1000000000;\n\n  vll a;\n  ll sign;\n\n \
+    \ bigint() :sign(1) {}\n\n  bigint(ll v) { *this = v; }\n\n  bigint(const string&\
+    \ s) { read(s); }\n\n  static bigint add_identity() { return bigint(0); }\n  static\
+    \ bigint mul_identity() { return bigint(1); }\n\n  void operator=(ll v) {\n  \
+    \  sign = 1;\n    if (v < 0) sign = -1, v = -v;\n    for (;v > 0;v = v / base)\
+    \ a.emplace_back(v % base);\n  }\n\n  bigint operator+(const bigint& v) const\
+    \ {\n    if (sign == v.sign) {\n      bigint res = v;\n      for (ll i = 0, carry\
+    \ = 0;i < (ll)max(a.size(), v.a.size()) or carry;++i) {\n        if (i == (ll)res.a.size())\
+    \ res.a.emplace_back(0);\n        res.a[i] += carry + (i < (ll)a.size()?a[i]:0);\n\
+    \        carry = res.a[i] >= base;\n        if (carry) res.a[i] -= base;\n   \
+    \   }\n      return res;\n    }\n    return *this - (-v);\n  }\n\n  bigint operator-(const\
+    \ bigint& v) const {\n    if (sign == v.sign) {\n      if (abs() >= v.abs()) {\n\
+    \        bigint res = *this;\n        for (ll i = 0, carry = 0;i < (ll)v.a.size()\
+    \ or carry;++i) {\n          res.a[i] -= carry + (i < (ll)v.a.size()?v.a[i]:0);\n\
+    \          carry = res.a[i] < 0;\n          if (carry) res.a[i] += base;\n   \
+    \     }\n        res.trim();\n        return res;\n      }\n      return -(v -\
+    \ *this);\n    }\n    return *this + (-v);\n  }\n\n  void operator*=(ll v) {\n\
+    \    if (v < 0) sign = -sign, v = -v;\n    for (ll i = 0, carry = 0;i < (ll)a.size()\
+    \ or carry;++i) {\n      if (i == (ll)a.size()) a.emplace_back(0);\n      ll cur\
+    \ = a[i] * (ll)v + carry;\n      carry = (ll)(cur / base);\n      a[i] = (ll)(cur\
+    \ % base);\n      // asm(\"divl %%ecx\" : \"=a\"(carry),\"=d\"(a[i]) : \"A\"(cur),\"\
+    c\"(base));\n    }\n    trim();\n  }\n\n  bigint operator*(ll v) const {\n   \
+    \ bigint res = *this;\n    res *= v;\n    return res;\n  }\n\n  friend pair<bigint,\
+    \ bigint> divmod(const bigint& a1, const bigint& b1) {\n    ll norm = base / (b1.a.back()\
     \ + 1);\n    bigint a = a1.abs() * norm;\n    bigint b = b1.abs() * norm;\n  \
     \  bigint q, r;\n    q.a.resize(a.a.size());\n\n    for (ll i = a.a.size() - 1;i\
     \ >= 0;i--) {\n      r *= base;\n      r += a.a[i];\n      ll s1 = r.a.size()\
@@ -186,7 +168,7 @@ data:
   isVerificationFile: true
   path: Verify/AIZU_bigInt_division.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 17:51:29+02:00'
+  timestamp: '2022-05-17 18:28:09+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/AIZU_bigInt_division.test.cpp
