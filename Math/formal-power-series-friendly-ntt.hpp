@@ -75,7 +75,7 @@ struct FormalPowerSeriesFriendlyNTT : vector<T> {
   }
 
   // https://judge.yosupo.jp/problem/division_of_polynomials
-  pair< P, P > div_mod(const P& r) {
+  pair<P, P> div_mod(const P& r) {
     P q = *this / r;
     P x = *this - q * r;
     x.shrink();

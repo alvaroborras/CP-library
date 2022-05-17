@@ -6,7 +6,7 @@ int main() {
   fastio;
   int N, Q;
   cin >> N >> Q;
-  vector<ll> a(N + 1);
+  vector<uint64_t> a(N + 1);
   for (int i = 1; i <= N; ++i) {
     cin >> a[i];
     a[i] += a[i - 1];

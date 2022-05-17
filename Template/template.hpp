@@ -1,4 +1,26 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <cstdio>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <cassert>
+#include <vector>
+#include <list>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <map>
+#include <set>
+#include <bitset>
+#include <string>
+#include <algorithm>
+#include <utility>
+#include <complex>
+#include <array>
+#include <random>
+#include <unordered_set>
+#include <unordered_map>
 using namespace std;
 
 #define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)
@@ -40,7 +62,7 @@ istream& operator>>(istream& is, pair< T1, T2 >& p) {
 
 template< typename T >
 ostream& operator<<(ostream& os, const vector< T >& v) {
-  for (int i = 0; i < (int)v.size(); i++) {
+  for (size_t i = 0; i < v.size(); i++) {
     os << v[i] << (i + 1 != v.size()?" ":"");
   }
   return os;
