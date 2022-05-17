@@ -249,10 +249,10 @@ data:
   verifiedWith:
   - Verify/AIZU_bigInt_addition.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
-  - Verify/AIZU_bigInt_division.test.cpp
-  - Verify/AIZU_bigInt_difference.test.cpp
-  - Verify/AIZU_bigInt_modulo.test.cpp
   - Verify/AIZU_bigInt_multiplication2.test.cpp
+  - Verify/AIZU_bigInt_difference.test.cpp
+  - Verify/AIZU_bigInt_division.test.cpp
+  - Verify/AIZU_bigInt_modulo.test.cpp
 documentation_of: Tools/bigint.hpp
 layout: document
 redirect_from:

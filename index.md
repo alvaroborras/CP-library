@@ -11,6 +11,18 @@ data:
     - icon: ':warning:'
       path: DataStructures/dualsegtree.hpp
       title: Dual Segment Tree
+    - icon: ':warning:'
+      path: DataStructures/persistent-array.hpp
+      title: DataStructures/persistent-array.hpp
+    - icon: ':warning:'
+      path: DataStructures/persistent-union-find.hpp
+      title: DataStructures/persistent-union-find.hpp
+    - icon: ':warning:'
+      path: DataStructures/union-find-undo.hpp
+      title: DataStructures/union-find-undo.hpp
+    - icon: ':warning:'
+      path: DataStructures/union-find.hpp
+      title: DataStructures/union-find.hpp
   - name: Math
     pages:
     - icon: ':heavy_check_mark:'
@@ -19,12 +31,24 @@ data:
     - icon: ':warning:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/formal-power-series-friendly-ntt.hpp
+      title: Math/formal-power-series-friendly-ntt.hpp
     - icon: ':warning:'
       path: Math/is_prime.hpp
       title: Math/is_prime.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/modint.hpp
+      title: Math/modint.hpp
     - icon: ':warning:'
       path: Math/moebius_mu.hpp
       title: Math/moebius_mu.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/number-theoretic-transform-friendly-mod-int.hpp
+      title: Math/number-theoretic-transform-friendly-mod-int.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/partition.hpp
+      title: Math/partition.hpp
     - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
@@ -76,6 +100,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_enumerate_primes.test.cpp
       title: Verify/LC_enumerate_primes.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_partition_function.test.cpp
+      title: Verify/LC_partition_function.test.cpp
+    - icon: ':x:'
+      path: Verify/LC_persistent_union_find.test.cpp
+      title: Verify/LC_persistent_union_find.test.cpp
     - icon: ':x:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
