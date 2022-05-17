@@ -1,4 +1,4 @@
-#pragma once 
+
 #include "prime-table.hpp"
 vector<int> enumerate_primes(int n) {
   if (n <= 1) return {};

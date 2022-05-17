@@ -1,4 +1,3 @@
-#pragma once
 
 struct bigint {
   using vll = vector<ll>;

@@ -1,4 +1,3 @@
-#pragma once
 vector<bool> prime_table(int n) {
   vector<bool> prime(n + 1, true);
   if (n >= 0) prime[0] = false;

@@ -1,6 +1,5 @@
-#pragma once
 
-template <typename M, M (*f)(M, M), M (*m1)()> class DualSegmentTree {
+template <typename M, M(*f)(M, M), M(*m1)()> class DualSegmentTree {
   int sz, height;
   vector<M> data;
   void down(int k) {
@@ -16,7 +15,7 @@ public:
       sz <<= 1, height++;
     data.assign(2 * sz, m1());
   }
-  void run(vector<M> &v) {
+  void run(vector<M>& v) {
     for (int i = 0; i < (int)v.size(); i++)
       data[i + sz] = v[i];
   }
