@@ -1,7 +1,6 @@
 #pragma once
 
 struct bigint {
-  using ll = long long;
   using vll = vector<ll>;
 
   inline static constexpr ll base_digits = 9;
