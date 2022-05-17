@@ -1,3 +1,4 @@
+#pragma once 
 
 struct PrimeCount {
   const ll N;
