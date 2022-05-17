@@ -1,6 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
 
 #include "Template/template.hpp"
+#include "../Utility/fastIO.hpp"
 #include "DataStructures/dualsegtree.hpp"
 
 int f(int a, int b) {
