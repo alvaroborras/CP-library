@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/enumerate_primes"
 
 #include "Template/template.hpp"
-#include "Utility/fastIO.hpp"
+// #include "Utility/fastIO.hpp"
 #include "Math/enumerate_primes.hpp"
 
 int main() {

@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/persistent_unionfind"
 
 #include "Template/template.hpp"
-#include "Utility/fastIO.hpp"
+// #include "Utility/fastIO.hpp"
 #include "DataStructures/persistent-array.hpp"
 #include "DataStructures/persistent-union-find.hpp"
 
