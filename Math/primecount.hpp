@@ -1,4 +1,3 @@
-//#pragma once
 
 struct PrimeCount {
   const ll N;
@@ -45,5 +44,5 @@ struct PrimeCount {
 };
 
 /**
- * @brief Prime Counting function \pi(N), number of primes <= N
+ * @brief Prime Counting function \pi(x)
  */
