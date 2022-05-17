@@ -23,9 +23,10 @@ int main() {
       cin >> L >> R >> x;
       R++;
       seg.update(L, R, x);
-    } else {
+    }
+    else {
       cin >> x;
-      cout << seg.query(x) << endl;
+      cout << seg.query(x) << nl;
     }
   }
   return 0;
