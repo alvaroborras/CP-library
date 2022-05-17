@@ -26,102 +26,63 @@ typedef pair<ll, ll> P;
 
 const int mod = 1e9 + 7;
 
-template <class S, class T>
-pair<S, T>& operator+=(pair<S, T>& s, const pair<S, T>& t) {
-  s.first += t.first, s.second += t.second;
-  return s;
-}
-template <class S, class T>
-pair<S, T>& operator-=(pair<S, T>& s, const pair<S, T>& t) {
-  s.first -= t.first, s.second -= t.second;
-  return s;
-}
-template <class S, class T>
-pair<S, T> operator+(const pair<S, T>& s, const pair<S, T>& t) {
-  return pair<S, T>(s.first + t.first, s.second + t.second);
-}
-template <class S, class T>
-pair<S, T> operator-(const pair<S, T>& s, const pair<S, T>& t) {
-  return pair<S, T>(s.first - t.first, s.second - t.second);
-}
-template <class T> T dot(const pair<T, T>& s, const pair<T, T>& t) {
-  return s.first * t.first + s.second * t.second;
-}
-template <class T> T cross(const pair<T, T>& s, const pair<T, T>& t) {
-  return s.first * t.second - s.second * t.first;
+template< typename T1, typename T2 >
+ostream& operator<<(ostream& os, const pair< T1, T2 >& p) {
+  os << p.first << " " << p.second;
+  return os;
 }
 
-template <typename T> ostream& operator<<(ostream& os, vector<T>& vec) {
-  reps(i, vec) os << vec[i] << " ";
-  return os;
+template< typename T1, typename T2 >
+istream& operator>>(istream& is, pair< T1, T2 >& p) {
+  is >> p.first >> p.second;
+  return is;
 }
-template <typename T> ostream& operator<<(ostream& os, const vector<T>& vec) {
-  reps(i, vec) os << vec[i] << " ";
-  return os;
-}
-template <typename T> ostream& operator<<(ostream& os, list<T>& ls) {
-  for (auto x : ls)
-    os << x << " ";
-  return os;
-}
-template <typename T> ostream& operator<<(ostream& os, const list<T>& ls) {
-  for (auto x : ls)
-    os << x << " ";
-  return os;
-}
-template <typename T> ostream& operator<<(ostream& os, deque<T>& deq) {
-  reps(i, deq) os << deq[i] << " ";
-  return os;
-}
-template <typename T, typename U>
-ostream& operator<<(ostream& os, pair<T, U>& ope) {
-  os << "(" << ope.first << ", " << ope.second << ")";
-  return os;
-}
-template <typename T, typename U>
-ostream& operator<<(ostream& os, const pair<T, U>& ope) {
-  os << "(" << ope.first << ", " << ope.second << ")";
-  return os;
-}
-template <typename T, typename U>
-ostream& operator<<(ostream& os, map<T, U>& ope) {
-  for (auto p : ope)
-    os << "(" << p.first << ", " << p.second << "),";
-  return os;
-}
-template <typename T> ostream& operator<<(ostream& os, set<T>& ope) {
-  for (auto x : ope)
-    os << x << " ";
-  return os;
-}
-template <typename T> ostream& operator<<(ostream& os, multiset<T>& ope) {
-  for (auto x : ope)
-    os << x << " ";
-  return os;
-}
-template <typename T> void outa(T a[], ll s, ll t) {
-  rep(i, s, t) {
-    cout << a[i];
-    if (i < t)
-      cout << " ";
+
+template< typename T >
+ostream& operator<<(ostream& os, const vector< T >& v) {
+  for (int i = 0; i < (int)v.size(); i++) {
+    os << v[i] << (i + 1 != v.size()?" ":"");
   }
-  cout << nl;
-}
-template <typename T, size_t N>
-ostream& operator<<(ostream& os, array<T, N>& arr) {
-  reps(i, arr) os << arr[i] << " ";
   return os;
 }
-template <typename T, size_t N>
-ostream& operator<<(ostream& os, const array<T, N>& arr) {
-  reps(i, arr) os << arr[i] << " ";
-  return os;
+
+template< typename T >
+istream& operator>>(istream& is, vector< T >& v) {
+  for (T& in : v) is >> in;
+  return is;
 }
-void dump_func() { cout << nl; }
-template <class Head, class... Tail>
-void dump_func(Head&& head, Tail &&...tail) {
-  cout << head;
-  if (sizeof...(Tail) > 0)
-    cout << " ";
-  dump_func(std::move(tail)...);
+
+template< typename T = int64_t >
+vector< T > make_v(size_t a) {
+  return vector< T >(a);
+}
+
+template< typename T, typename... Ts >
+auto make_v(size_t a, Ts... ts) {
+  return vector< decltype(make_v< T >(ts...)) >(a, make_v< T >(ts...));
+}
+
+template< typename T, typename V >
+typename enable_if< is_class< T >::value == 0 >::type fill_v(T& t, const V& v) {
+  t = v;
+}
+
+template< typename T, typename V >
+typename enable_if< is_class< T >::value != 0 >::type fill_v(T& t, const V& v) {
+  for (auto& e : t) fill_v(e, v);
+}
+
+template< typename F >
+struct FixPoint : F {
+  explicit FixPoint(F&& f) : F(forward< F >(f)) {}
+
+  template< typename... Args >
+  decltype(auto) operator()(Args &&... args) const {
+    return F::operator()(*this, forward< Args >(args)...);
+  }
+};
+
+template< typename F >
+inline decltype(auto) MFP(F&& f) {
+  return FixPoint< F >{forward< F >(f)};
 }
