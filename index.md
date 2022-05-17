@@ -1,11 +1,6 @@
 ---
 data:
   libraryCategories:
-  - name: DP
-    pages:
-    - icon: ':warning:'
-      path: DP/cumulative-sum.hpp
-      title: DP/cumulative-sum.hpp
   - name: DataStructures
     pages:
     - icon: ':heavy_check_mark:'
@@ -103,6 +98,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_convolution_mod.test.cpp
       title: Verify/LC_convolution_mod.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_division_polynomials.test.cpp
+      title: Verify/LC_division_polynomials.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_enumerate_primes.test.cpp
       title: Verify/LC_enumerate_primes.test.cpp

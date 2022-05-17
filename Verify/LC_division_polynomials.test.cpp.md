@@ -20,11 +20,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/convolution_mod
+    PROBLEM: https://judge.yosupo.jp/problem/division_of_polynomials
     links:
-    - https://judge.yosupo.jp/problem/convolution_mod
-  bundledCode: "#line 1 \"Verify/LC_convolution_mod.test.cpp\"\n#define PROBLEM \"\
-    https://judge.yosupo.jp/problem/convolution_mod\"\n\n#line 1 \"Template/template.hpp\"\
+    - https://judge.yosupo.jp/problem/division_of_polynomials
+  bundledCode: "#line 1 \"Verify/LC_division_polynomials.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/division_of_polynomials\"\n\n#line 1 \"Template/template.hpp\"\
     \n#include <iostream>\n#include <iomanip>\n#include <cstdio>\n#include <cmath>\n\
     #include <ctime>\n#include <cstdlib>\n#include <cassert>\n#include <vector>\n\
     #include <list>\n#include <stack>\n#include <queue>\n#include <deque>\n#include\
@@ -282,30 +282,39 @@ data:
     \    P bs(n, T(1));\n    for (int i = 1; i < n; i++) bs[i] = bs[i - 1] * c * rfact[i]\
     \ * fact[i - 1];\n    p = (p * bs).pre(n);\n    p = p.rev();\n    for (int i =\
     \ 0; i < n; i++) p[i] *= rfact[i];\n    return p;\n  }\n};\n\ntemplate<typename\
-    \ Mint>\nusing FPS = FormalPowerSeriesFriendlyNTT<Mint>;\n#line 6 \"Verify/LC_convolution_mod.test.cpp\"\
+    \ Mint>\nusing FPS = FormalPowerSeriesFriendlyNTT<Mint>;\n#line 6 \"Verify/LC_division_polynomials.test.cpp\"\
     \n\nconst int MOD = 998244353;\nusing mint = ModInt<MOD>;\n\nint main() {\n  fastio;\n\
-    \  int N, M;\n  cin >> N >> M;\n  FPS<mint> F(N), G(M);\n  cin >> F;\n  cin >>\
-    \ G;\n  cout << F * G << endl;\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/convolution_mod\"\n\n#include\
-    \ \"Template/template.hpp\"\n#include \"Math/modint.hpp\"\n#include \"Math/formal-power-series-friendly-ntt.hpp\"\
-    \n\nconst int MOD = 998244353;\nusing mint = ModInt<MOD>;\n\nint main() {\n  fastio;\n\
-    \  int N, M;\n  cin >> N >> M;\n  FPS<mint> F(N), G(M);\n  cin >> F;\n  cin >>\
-    \ G;\n  cout << F * G << endl;\n}"
+    \n  int N, M;\n  cin >> N >> M;\n  FPS<mint> F(N), G(M);\n  cin >> F;\n  cin >>\
+    \ G;\n  pair<FPS<mint>, FPS<mint>> D = F.div_mod(G);\n  cout << D.first.size()\
+    \ << \" \" << D.second.size() << nl;\n  for (size_t i = 0; i < D.first.size();\
+    \ ++i)\n    cout << D.first[i] << (i + 1 == D.first.size()?\"\":\" \");\n  cout\
+    \ << nl;\n  for (size_t i = 0; i < D.second.size(); ++i)\n    cout << D.second[i]\
+    \ << (i + 1 == D.second.size()?\"\":\" \");\n  cout << nl;\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/division_of_polynomials\"\
+    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/modint.hpp\"\n#include\
+    \ \"../Math/formal-power-series-friendly-ntt.hpp\"\n\nconst int MOD = 998244353;\n\
+    using mint = ModInt<MOD>;\n\nint main() {\n  fastio;\n\n  int N, M;\n  cin >>\
+    \ N >> M;\n  FPS<mint> F(N), G(M);\n  cin >> F;\n  cin >> G;\n  pair<FPS<mint>,\
+    \ FPS<mint>> D = F.div_mod(G);\n  cout << D.first.size() << \" \" << D.second.size()\
+    \ << nl;\n  for (size_t i = 0; i < D.first.size(); ++i)\n    cout << D.first[i]\
+    \ << (i + 1 == D.first.size()?\"\":\" \");\n  cout << nl;\n  for (size_t i = 0;\
+    \ i < D.second.size(); ++i)\n    cout << D.second[i] << (i + 1 == D.second.size()?\"\
+    \":\" \");\n  cout << nl;\n}"
   dependsOn:
   - Template/template.hpp
   - Math/modint.hpp
   - Math/formal-power-series-friendly-ntt.hpp
   - Math/number-theoretic-transform-friendly-mod-int.hpp
   isVerificationFile: true
-  path: Verify/LC_convolution_mod.test.cpp
+  path: Verify/LC_division_polynomials.test.cpp
   requiredBy: []
   timestamp: '2022-05-17 22:47:24+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Verify/LC_convolution_mod.test.cpp
+documentation_of: Verify/LC_division_polynomials.test.cpp
 layout: document
 redirect_from:
-- /verify/Verify/LC_convolution_mod.test.cpp
-- /verify/Verify/LC_convolution_mod.test.cpp.html
-title: Verify/LC_convolution_mod.test.cpp
+- /verify/Verify/LC_division_polynomials.test.cpp
+- /verify/Verify/LC_division_polynomials.test.cpp.html
+title: Verify/LC_division_polynomials.test.cpp
 ---

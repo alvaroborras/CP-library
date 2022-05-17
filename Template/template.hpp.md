@@ -31,6 +31,9 @@ data:
     path: Verify/LC_convolution_mod.test.cpp
     title: Verify/LC_convolution_mod.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_division_polynomials.test.cpp
+    title: Verify/LC_division_polynomials.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_enumerate_primes.test.cpp
     title: Verify/LC_enumerate_primes.test.cpp
   - icon: ':heavy_check_mark:'
@@ -56,8 +59,13 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Template/template.hpp\"\n#include <bits/stdc++.h>\nusing\
-    \ namespace std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n\
+  bundledCode: "#line 1 \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n\
+    #include <cstdio>\n#include <cmath>\n#include <ctime>\n#include <cstdlib>\n#include\
+    \ <cassert>\n#include <vector>\n#include <list>\n#include <stack>\n#include <queue>\n\
+    #include <deque>\n#include <map>\n#include <set>\n#include <bitset>\n#include\
+    \ <string>\n#include <algorithm>\n#include <utility>\n#include <complex>\n#include\
+    \ <array>\n#include <random>\n#include <unordered_set>\n#include <unordered_map>\n\
+    using namespace std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n\
     #define per(x, s, t) for (ll x = (s); (x) >= (t); (x)--)\n#define reps(x, s) for\
     \ (ll x = 0; (x) < (ll)(s).size(); (x)++)\n#define chmin(x, y) (x) = min((x),\
     \ (y))\n#define chmax(x, y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n\
@@ -72,7 +80,7 @@ data:
     \ << p.second;\n  return os;\n}\n\ntemplate< typename T1, typename T2 >\nistream&\
     \ operator>>(istream& is, pair< T1, T2 >& p) {\n  is >> p.first >> p.second;\n\
     \  return is;\n}\n\ntemplate< typename T >\nostream& operator<<(ostream& os, const\
-    \ vector< T >& v) {\n  for (int i = 0; i < (int)v.size(); i++) {\n    os << v[i]\
+    \ vector< T >& v) {\n  for (size_t i = 0; i < v.size(); i++) {\n    os << v[i]\
     \ << (i + 1 != v.size()?\" \":\"\");\n  }\n  return os;\n}\n\ntemplate< typename\
     \ T >\nistream& operator>>(istream& is, vector< T >& v) {\n  for (T& in : v) is\
     \ >> in;\n  return is;\n}\n\ntemplate< typename T = int64_t >\nvector< T > make_v(size_t\
@@ -87,12 +95,17 @@ data:
     \ operator()(Args &&... args) const {\n    return F::operator()(*this, forward<\
     \ Args >(args)...);\n  }\n};\n\ntemplate< typename F >\ninline decltype(auto)\
     \ MFP(F&& f) {\n  return FixPoint< F >{forward< F >(f)};\n}\n"
-  code: "#include <bits/stdc++.h>\nusing namespace std;\n\n#define rep(x, s, t) for\
-    \ (ll x = (s); (x) <= (t); (x)++)\n#define per(x, s, t) for (ll x = (s); (x) >=\
-    \ (t); (x)--)\n#define reps(x, s) for (ll x = 0; (x) < (ll)(s).size(); (x)++)\n\
-    #define chmin(x, y) (x) = min((x), (y))\n#define chmax(x, y) (x) = max((x), (y))\n\
-    #define sz(x) ((ll)(x).size())\n#define all(x) (x).begin(), (x).end()\n#define\
-    \ rall(x) (x).rbegin(), (x).rend()\n#define outl(...) dump_func(__VA_ARGS__)\n\
+  code: "#include <iostream>\n#include <iomanip>\n#include <cstdio>\n#include <cmath>\n\
+    #include <ctime>\n#include <cstdlib>\n#include <cassert>\n#include <vector>\n\
+    #include <list>\n#include <stack>\n#include <queue>\n#include <deque>\n#include\
+    \ <map>\n#include <set>\n#include <bitset>\n#include <string>\n#include <algorithm>\n\
+    #include <utility>\n#include <complex>\n#include <array>\n#include <random>\n\
+    #include <unordered_set>\n#include <unordered_map>\nusing namespace std;\n\n#define\
+    \ rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n#define per(x, s, t) for (ll\
+    \ x = (s); (x) >= (t); (x)--)\n#define reps(x, s) for (ll x = 0; (x) < (ll)(s).size();\
+    \ (x)++)\n#define chmin(x, y) (x) = min((x), (y))\n#define chmax(x, y) (x) = max((x),\
+    \ (y))\n#define sz(x) ((ll)(x).size())\n#define all(x) (x).begin(), (x).end()\n\
+    #define rall(x) (x).rbegin(), (x).rend()\n#define outl(...) dump_func(__VA_ARGS__)\n\
     #define outf(x) cout << fixed << setprecision(16) << (x) << nl\n#define fastio\
     \ ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)\n#define nl \"\\n\"\n#define\
     \ pb push_back\n#define fi first\n#define se second\n#define inf 2e18\n#define\
@@ -103,31 +116,32 @@ data:
     \ os;\n}\n\ntemplate< typename T1, typename T2 >\nistream& operator>>(istream&\
     \ is, pair< T1, T2 >& p) {\n  is >> p.first >> p.second;\n  return is;\n}\n\n\
     template< typename T >\nostream& operator<<(ostream& os, const vector< T >& v)\
-    \ {\n  for (int i = 0; i < (int)v.size(); i++) {\n    os << v[i] << (i + 1 !=\
-    \ v.size()?\" \":\"\");\n  }\n  return os;\n}\n\ntemplate< typename T >\nistream&\
-    \ operator>>(istream& is, vector< T >& v) {\n  for (T& in : v) is >> in;\n  return\
-    \ is;\n}\n\ntemplate< typename T = int64_t >\nvector< T > make_v(size_t a) {\n\
-    \  return vector< T >(a);\n}\n\ntemplate< typename T, typename... Ts >\nauto make_v(size_t\
-    \ a, Ts... ts) {\n  return vector< decltype(make_v< T >(ts...)) >(a, make_v< T\
-    \ >(ts...));\n}\n\ntemplate< typename T, typename V >\ntypename enable_if< is_class<\
-    \ T >::value == 0 >::type fill_v(T& t, const V& v) {\n  t = v;\n}\n\ntemplate<\
-    \ typename T, typename V >\ntypename enable_if< is_class< T >::value != 0 >::type\
-    \ fill_v(T& t, const V& v) {\n  for (auto& e : t) fill_v(e, v);\n}\n\ntemplate<\
-    \ typename F >\nstruct FixPoint : F {\n  explicit FixPoint(F&& f) : F(forward<\
-    \ F >(f)) {}\n\n  template< typename... Args >\n  decltype(auto) operator()(Args\
-    \ &&... args) const {\n    return F::operator()(*this, forward< Args >(args)...);\n\
-    \  }\n};\n\ntemplate< typename F >\ninline decltype(auto) MFP(F&& f) {\n  return\
-    \ FixPoint< F >{forward< F >(f)};\n}"
+    \ {\n  for (size_t i = 0; i < v.size(); i++) {\n    os << v[i] << (i + 1 != v.size()?\"\
+    \ \":\"\");\n  }\n  return os;\n}\n\ntemplate< typename T >\nistream& operator>>(istream&\
+    \ is, vector< T >& v) {\n  for (T& in : v) is >> in;\n  return is;\n}\n\ntemplate<\
+    \ typename T = int64_t >\nvector< T > make_v(size_t a) {\n  return vector< T >(a);\n\
+    }\n\ntemplate< typename T, typename... Ts >\nauto make_v(size_t a, Ts... ts) {\n\
+    \  return vector< decltype(make_v< T >(ts...)) >(a, make_v< T >(ts...));\n}\n\n\
+    template< typename T, typename V >\ntypename enable_if< is_class< T >::value ==\
+    \ 0 >::type fill_v(T& t, const V& v) {\n  t = v;\n}\n\ntemplate< typename T, typename\
+    \ V >\ntypename enable_if< is_class< T >::value != 0 >::type fill_v(T& t, const\
+    \ V& v) {\n  for (auto& e : t) fill_v(e, v);\n}\n\ntemplate< typename F >\nstruct\
+    \ FixPoint : F {\n  explicit FixPoint(F&& f) : F(forward< F >(f)) {}\n\n  template<\
+    \ typename... Args >\n  decltype(auto) operator()(Args &&... args) const {\n \
+    \   return F::operator()(*this, forward< Args >(args)...);\n  }\n};\n\ntemplate<\
+    \ typename F >\ninline decltype(auto) MFP(F&& f) {\n  return FixPoint< F >{forward<\
+    \ F >(f)};\n}"
   dependsOn: []
   isVerificationFile: false
   path: Template/template.hpp
   requiredBy: []
-  timestamp: '2022-05-17 18:28:09+02:00'
+  timestamp: '2022-05-17 22:47:24+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
   - Verify/LC_aplusb.test.cpp
   - Verify/LC_persistent_union_find.test.cpp
+  - Verify/LC_division_polynomials.test.cpp
   - Verify/LC_partition_function.test.cpp
   - Verify/LC_prime_factorization.test.cpp
   - Verify/AIZU_bigInt_addition.test.cpp

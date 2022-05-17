@@ -10,6 +10,9 @@ data:
     path: Verify/LC_convolution_mod.test.cpp
     title: Verify/LC_convolution_mod.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_division_polynomials.test.cpp
+    title: Verify/LC_division_polynomials.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_inversion_power_series.test.cpp
     title: Verify/LC_inversion_power_series.test.cpp
   - icon: ':heavy_check_mark:'
@@ -135,12 +138,12 @@ data:
     \ this->size() - r.size() + 1;\n    return *this = (rev().pre(n) * r.rev().inv(n)).pre(n).rev(n);\n\
     \  }\n\n  P& operator%=(const P& r) {\n    *this -= *this / r * r;\n    shrink();\n\
     \    return *this;\n  }\n\n  // https://judge.yosupo.jp/problem/division_of_polynomials\n\
-    \  pair< P, P > div_mod(const P& r) {\n    P q = *this / r;\n    P x = *this -\
-    \ q * r;\n    x.shrink();\n    return make_pair(q, x);\n  }\n\n  P operator-()\
-    \ const {\n    P ret(this->size());\n    for (int i = 0; i < (int)this->size();\
-    \ i++) ret[i] = -(*this)[i];\n    return ret;\n  }\n\n  P& operator+=(const T&\
-    \ r) {\n    if (this->empty()) this->resize(1);\n    (*this)[0] += r;\n    return\
-    \ *this;\n  }\n\n  P& operator-=(const T& r) {\n    if (this->empty()) this->resize(1);\n\
+    \  pair<P, P> div_mod(const P& r) {\n    P q = *this / r;\n    P x = *this - q\
+    \ * r;\n    x.shrink();\n    return make_pair(q, x);\n  }\n\n  P operator-() const\
+    \ {\n    P ret(this->size());\n    for (int i = 0; i < (int)this->size(); i++)\
+    \ ret[i] = -(*this)[i];\n    return ret;\n  }\n\n  P& operator+=(const T& r) {\n\
+    \    if (this->empty()) this->resize(1);\n    (*this)[0] += r;\n    return *this;\n\
+    \  }\n\n  P& operator-=(const T& r) {\n    if (this->empty()) this->resize(1);\n\
     \    (*this)[0] -= r;\n    return *this;\n  }\n\n  P& operator*=(const T& v) {\n\
     \    for (int i = 0; i < (int)this->size(); i++) (*this)[i] *= v;\n    return\
     \ *this;\n  }\n\n  P dot(P r) const {\n    P ret(min(this->size(), r.size()));\n\
@@ -258,12 +261,12 @@ data:
     \ this->size() - r.size() + 1;\n    return *this = (rev().pre(n) * r.rev().inv(n)).pre(n).rev(n);\n\
     \  }\n\n  P& operator%=(const P& r) {\n    *this -= *this / r * r;\n    shrink();\n\
     \    return *this;\n  }\n\n  // https://judge.yosupo.jp/problem/division_of_polynomials\n\
-    \  pair< P, P > div_mod(const P& r) {\n    P q = *this / r;\n    P x = *this -\
-    \ q * r;\n    x.shrink();\n    return make_pair(q, x);\n  }\n\n  P operator-()\
-    \ const {\n    P ret(this->size());\n    for (int i = 0; i < (int)this->size();\
-    \ i++) ret[i] = -(*this)[i];\n    return ret;\n  }\n\n  P& operator+=(const T&\
-    \ r) {\n    if (this->empty()) this->resize(1);\n    (*this)[0] += r;\n    return\
-    \ *this;\n  }\n\n  P& operator-=(const T& r) {\n    if (this->empty()) this->resize(1);\n\
+    \  pair<P, P> div_mod(const P& r) {\n    P q = *this / r;\n    P x = *this - q\
+    \ * r;\n    x.shrink();\n    return make_pair(q, x);\n  }\n\n  P operator-() const\
+    \ {\n    P ret(this->size());\n    for (int i = 0; i < (int)this->size(); i++)\
+    \ ret[i] = -(*this)[i];\n    return ret;\n  }\n\n  P& operator+=(const T& r) {\n\
+    \    if (this->empty()) this->resize(1);\n    (*this)[0] += r;\n    return *this;\n\
+    \  }\n\n  P& operator-=(const T& r) {\n    if (this->empty()) this->resize(1);\n\
     \    (*this)[0] -= r;\n    return *this;\n  }\n\n  P& operator*=(const T& v) {\n\
     \    for (int i = 0; i < (int)this->size(); i++) (*this)[i] *= v;\n    return\
     \ *this;\n  }\n\n  P dot(P r) const {\n    P ret(min(this->size(), r.size()));\n\
@@ -360,10 +363,11 @@ data:
   isVerificationFile: false
   path: Math/formal-power-series-friendly-ntt.hpp
   requiredBy: []
-  timestamp: '2022-05-17 18:28:09+02:00'
+  timestamp: '2022-05-17 22:47:24+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
+  - Verify/LC_division_polynomials.test.cpp
   - Verify/LC_partition_function.test.cpp
   - Verify/LC_inversion_power_series.test.cpp
   - Verify/LC_convolution_mod.test.cpp

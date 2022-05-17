@@ -7,6 +7,9 @@ data:
     path: Verify/LC_convolution_mod.test.cpp
     title: Verify/LC_convolution_mod.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_division_polynomials.test.cpp
+    title: Verify/LC_division_polynomials.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_inversion_power_series.test.cpp
     title: Verify/LC_inversion_power_series.test.cpp
   - icon: ':heavy_check_mark:'
@@ -73,6 +76,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
+  - Verify/LC_division_polynomials.test.cpp
   - Verify/LC_partition_function.test.cpp
   - Verify/LC_inversion_power_series.test.cpp
   - Verify/LC_convolution_mod.test.cpp
