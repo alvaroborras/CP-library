@@ -26,8 +26,8 @@ data:
     \    if (k == 0) {\n      t->data = data;\n      return t;\n    }\n    auto p\
     \ = build(t->child[k & ((1 << LOG) - 1)], data, k >> LOG);\n    t->child[k & ((1\
     \ << LOG) - 1)] = p;\n    return t;\n  }\n\n  void build(const vector< T >& v)\
-    \ {\n    root = nullptr;\n    for (int i = 0; i < v.size(); i++) {\n      root\
-    \ = build(root, v[i], i);\n    }\n  }\n};\n"
+    \ {\n    root = nullptr;\n    for (int i = 0; i < (int)v.size(); i++) {\n    \
+    \  root = build(root, v[i], i);\n    }\n  }\n};\n"
   code: "template<typename T, int LOG>\nstruct PersistentArray {\n  struct Node {\n\
     \    T data;\n    Node* child[1 << LOG] = {};\n\n    Node() {}\n\n    Node(const\
     \ T& data) : data(data) {}\n  };\n\n  Node* root;\n\n  PersistentArray() : root(nullptr)\
@@ -43,13 +43,13 @@ data:
     \ = data;\n      return t;\n    }\n    auto p = build(t->child[k & ((1 << LOG)\
     \ - 1)], data, k >> LOG);\n    t->child[k & ((1 << LOG) - 1)] = p;\n    return\
     \ t;\n  }\n\n  void build(const vector< T >& v) {\n    root = nullptr;\n    for\
-    \ (int i = 0; i < v.size(); i++) {\n      root = build(root, v[i], i);\n    }\n\
-    \  }\n};"
+    \ (int i = 0; i < (int)v.size(); i++) {\n      root = build(root, v[i], i);\n\
+    \    }\n  }\n};"
   dependsOn: []
   isVerificationFile: false
   path: DataStructures/persistent-array.hpp
   requiredBy: []
-  timestamp: '2022-05-17 17:12:10+02:00'
+  timestamp: '2022-05-17 17:51:29+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_persistent_union_find.test.cpp

@@ -25,16 +25,17 @@ data:
     \ < (ll)(s).size(); (x)++)\n#define chmin(x, y) (x) = min((x), (y))\n#define chmax(x,\
     \ y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n#define all(x) (x).begin(),\
     \ (x).end()\n#define rall(x) (x).rbegin(), (x).rend()\n#define outl(...) dump_func(__VA_ARGS__)\n\
-    #define outf(x) cout << fixed << setprecision(16) << (x) << nl\n\n#define nl \"\
-    \\n\"\n#define pb push_back\n#define fi first\n#define se second\n#define inf\
-    \ 2e18\n#define eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\ntypedef\
-    \ long long ll;\ntypedef unsigned long long ull;\ntypedef pair<ll, ll> P;\n\n\
-    const int mod = 1e9 + 7;\n\ntemplate <class S, class T>\npair<S, T>& operator+=(pair<S,\
-    \ T>& s, const pair<S, T>& t) {\n  s.first += t.first, s.second += t.second;\n\
-    \  return s;\n}\ntemplate <class S, class T>\npair<S, T>& operator-=(pair<S, T>&\
-    \ s, const pair<S, T>& t) {\n  s.first -= t.first, s.second -= t.second;\n  return\
-    \ s;\n}\ntemplate <class S, class T>\npair<S, T> operator+(const pair<S, T>& s,\
-    \ const pair<S, T>& t) {\n  return pair<S, T>(s.first + t.first, s.second + t.second);\n\
+    #define outf(x) cout << fixed << setprecision(16) << (x) << nl\n#define fastio\
+    \ ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)\n#define nl \"\\n\"\n#define\
+    \ pb push_back\n#define fi first\n#define se second\n#define inf 2e18\n#define\
+    \ eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\ntypedef long long\
+    \ ll;\ntypedef unsigned long long ull;\ntypedef pair<ll, ll> P;\n\nconst int mod\
+    \ = 1e9 + 7;\n\ntemplate <class S, class T>\npair<S, T>& operator+=(pair<S, T>&\
+    \ s, const pair<S, T>& t) {\n  s.first += t.first, s.second += t.second;\n  return\
+    \ s;\n}\ntemplate <class S, class T>\npair<S, T>& operator-=(pair<S, T>& s, const\
+    \ pair<S, T>& t) {\n  s.first -= t.first, s.second -= t.second;\n  return s;\n\
+    }\ntemplate <class S, class T>\npair<S, T> operator+(const pair<S, T>& s, const\
+    \ pair<S, T>& t) {\n  return pair<S, T>(s.first + t.first, s.second + t.second);\n\
     }\ntemplate <class S, class T>\npair<S, T> operator-(const pair<S, T>& s, const\
     \ pair<S, T>& t) {\n  return pair<S, T>(s.first - t.first, s.second - t.second);\n\
     }\ntemplate <class T> T dot(const pair<T, T>& s, const pair<T, T>& t) {\n  return\
@@ -185,7 +186,7 @@ data:
   isVerificationFile: true
   path: Verify/AIZU_bigInt_division.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 17:25:40+02:00'
+  timestamp: '2022-05-17 17:51:29+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/AIZU_bigInt_division.test.cpp

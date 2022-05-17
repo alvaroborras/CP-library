@@ -22,8 +22,9 @@ data:
     \ chmax(x, y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n#define all(x)\
     \ (x).begin(), (x).end()\n#define rall(x) (x).rbegin(), (x).rend()\n#define outl(...)\
     \ dump_func(__VA_ARGS__)\n#define outf(x) cout << fixed << setprecision(16) <<\
-    \ (x) << nl\n\n#define nl \"\\n\"\n#define pb push_back\n#define fi first\n#define\
-    \ se second\n#define inf 2e18\n#define eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\
+    \ (x) << nl\n#define fastio ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)\n\
+    #define nl \"\\n\"\n#define pb push_back\n#define fi first\n#define se second\n\
+    #define inf 2e18\n#define eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\
     \ntypedef long long ll;\ntypedef unsigned long long ull;\ntypedef pair<ll, ll>\
     \ P;\n\nconst int mod = 1e9 + 7;\n\ntemplate <class S, class T>\npair<S, T>& operator+=(pair<S,\
     \ T>& s, const pair<S, T>& t) {\n  s.first += t.first, s.second += t.second;\n\
@@ -62,18 +63,17 @@ data:
     \ << arr[i] << \" \";\n  return os;\n}\nvoid dump_func() { cout << nl; }\ntemplate\
     \ <class Head, class... Tail>\nvoid dump_func(Head&& head, Tail &&...tail) {\n\
     \  cout << head;\n  if (sizeof...(Tail) > 0)\n    cout << \" \";\n  dump_func(std::move(tail)...);\n\
-    }\n#line 4 \"Verify/LC_aplusb.test.cpp\"\n// #include \"Utility/fastIO.hpp\"\n\
-    \nint main() {\n  int a, b;\n  cin >> a >> b;\n  cout << a + b << nl;\n  return\
-    \ 0;\n}\n"
+    }\n#line 4 \"Verify/LC_aplusb.test.cpp\"\n\nint main() {\n  fastio;\n  int a,\
+    \ b;\n  cin >> a >> b;\n  cout << a + b << nl;\n  return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n\n#include \"\
-    Template/template.hpp\"\n// #include \"Utility/fastIO.hpp\"\n\nint main() {\n\
-    \  int a, b;\n  cin >> a >> b;\n  cout << a + b << nl;\n  return 0;\n}"
+    Template/template.hpp\"\n\nint main() {\n  fastio;\n  int a, b;\n  cin >> a >>\
+    \ b;\n  cout << a + b << nl;\n  return 0;\n}"
   dependsOn:
   - Template/template.hpp
   isVerificationFile: true
   path: Verify/LC_aplusb.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 17:45:16+02:00'
+  timestamp: '2022-05-17 17:51:29+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_aplusb.test.cpp
