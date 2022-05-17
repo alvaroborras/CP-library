@@ -1,17 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: Math/prime-table.hpp
     title: Math/prime-table.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: Verify/LC_enumerate_primes.test.cpp
-    title: Verify/LC_enumerate_primes.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/enumerate_primes.hpp\"\n\n#line 1 \"Math/prime-table.hpp\"\
@@ -35,9 +32,8 @@ data:
   path: Math/enumerate_primes.hpp
   requiredBy: []
   timestamp: '2022-05-17 16:42:23+02:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - Verify/LC_enumerate_primes.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Math/enumerate_primes.hpp
 layout: document
 redirect_from:

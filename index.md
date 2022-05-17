@@ -25,7 +25,7 @@ data:
       title: DataStructures/union-find.hpp
   - name: Math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
     - icon: ':warning:'
@@ -49,7 +49,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/partition.hpp
       title: Math/partition.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
     - icon: ':warning:'
@@ -97,7 +97,7 @@ data:
     - icon: ':x:'
       path: Verify/LC_aplusb.test.cpp
       title: Verify/LC_aplusb.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_enumerate_primes.test.cpp
       title: Verify/LC_enumerate_primes.test.cpp
     - icon: ':heavy_check_mark:'

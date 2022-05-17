@@ -176,16 +176,16 @@ data:
     \ 5 \"Verify/AIZU_bigInt_addition.test.cpp\"\n\nint main() {\n  bigint A, B;\n\
     \  cin >> A >> B;\n  cout << A + B << endl;\n  return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/2/NTL_2_A\"\
-    \n\n#include \"../Template/template.hpp\"\n#include \"../Tools/bigint.hpp\"\n\n\
-    int main() {\n  bigint A, B;\n  cin >> A >> B;\n  cout << A + B << endl;\n  return\
-    \ 0;\n}"
+    \n\n#include \"Template/template.hpp\"\n#include \"Tools/bigint.hpp\"\n\nint main()\
+    \ {\n  bigint A, B;\n  cin >> A >> B;\n  cout << A + B << endl;\n  return 0;\n\
+    }"
   dependsOn:
   - Template/template.hpp
   - Tools/bigint.hpp
   isVerificationFile: true
   path: Verify/AIZU_bigInt_addition.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 17:12:10+02:00'
+  timestamp: '2022-05-17 17:25:40+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/AIZU_bigInt_addition.test.cpp

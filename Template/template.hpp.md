@@ -22,9 +22,6 @@ data:
     path: Verify/AIZU_bigInt_multiplication2.test.cpp
     title: Verify/AIZU_bigInt_multiplication2.test.cpp
   - icon: ':heavy_check_mark:'
-    path: Verify/LC_enumerate_primes.test.cpp
-    title: Verify/LC_enumerate_primes.test.cpp
-  - icon: ':heavy_check_mark:'
     path: Verify/LC_partition_function.test.cpp
     title: Verify/LC_partition_function.test.cpp
   _isVerificationFailed: false
@@ -140,7 +137,6 @@ data:
   - Verify/AIZU_bigInt_multiplication.test.cpp
   - Verify/AIZU_bigInt_division.test.cpp
   - Verify/AIZU_bigInt_difference.test.cpp
-  - Verify/LC_enumerate_primes.test.cpp
   - Verify/AIZU_bigInt_modulo.test.cpp
   - Verify/AIZU_bigInt_multiplication2.test.cpp
 documentation_of: Template/template.hpp

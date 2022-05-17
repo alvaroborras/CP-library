@@ -14,15 +14,14 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../Utility/fastIO.hpp:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: Utility/fastIO.hpp:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/factorize\"\n\n#include\
-    \ \"../Template/template.hpp\"\n#include \"../Utility/fastIO.hpp\"\n#include \"\
-    ../Math/fast_prime_factorization.hpp\"\n\nint main() {\n  int Q;\n  cin >> Q;\n\
-    \n  uint64_t X;\n  for (int q = 0; q < Q; ++q) {\n    cin >> X;\n    auto ret\
-    \ = fast_factorize::factorize(X);\n    sort(ret.begin(), ret.end());\n    cout\
-    \ << ret.size();\n    for (auto& x : ret) cout << ' ' << x;\n    cout << '\\n';\n\
-    \  }\n}\n"
+    \ \"Template/template.hpp\"\n#include \"Utility/fastIO.hpp\"\n#include \"Math/fast_prime_factorization.hpp\"\
+    \n\nint main() {\n  int Q;\n  cin >> Q;\n\n  uint64_t X;\n  for (int q = 0; q\
+    \ < Q; ++q) {\n    cin >> X;\n    auto ret = fast_factorize::factorize(X);\n \
+    \   sort(ret.begin(), ret.end());\n    cout << ret.size();\n    for (auto& x :\
+    \ ret) cout << ' ' << x;\n    cout << '\\n';\n  }\n}\n"
   dependsOn: []
   isVerificationFile: true
   path: Verify/LC_prime_factorization.test.cpp

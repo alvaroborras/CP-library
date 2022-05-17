@@ -2,16 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: Math/enumerate_primes.hpp
     title: Math/enumerate_primes.hpp
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: Verify/LC_enumerate_primes.test.cpp
-    title: Verify/LC_enumerate_primes.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/prime-table.hpp\"\nvector<bool> prime_table(int n)\
@@ -30,9 +27,8 @@ data:
   requiredBy:
   - Math/enumerate_primes.hpp
   timestamp: '2022-05-17 16:42:23+02:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - Verify/LC_enumerate_primes.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Math/prime-table.hpp
 layout: document
 redirect_from:

@@ -14,11 +14,11 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../Utility/fastIO.hpp:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: Utility/fastIO.hpp:\
     \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/persistent_unionfind\"\n\
-    \n#include \"../Template/template.hpp\"\n#include \"../Utility/fastIO.hpp\"\n\
-    #include \"../DataStructures/persistent-array.hpp\"\n#include \"../DataStructures/persistent-union-find.hpp\"\
+    \n#include \"Template/template.hpp\"\n#include \"Utility/fastIO.hpp\"\n#include\
+    \ \"DataStructures/persistent-array.hpp\"\n#include \"DataStructures/persistent-union-find.hpp\"\
     \n\nint main() {\n  int N, Q;\n  cin >> N >> Q;\n  vector<PersistentUnionFind>\
     \ uf(Q + 1);\n  uf[0] = PersistentUnionFind(N);\n  for (int i = 1; i <= Q; i++)\
     \ {\n    int t, k, u, v;\n    cin >> t >> k >> u >> v;\n    ++k;\n    if (t ==\
