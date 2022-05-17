@@ -135,14 +135,14 @@ data:
   timestamp: '2022-05-17 17:12:10+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - Verify/LC_partition_function.test.cpp
   - Verify/AIZU_bigInt_addition.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
-  - Verify/AIZU_bigInt_multiplication2.test.cpp
-  - Verify/LC_enumerate_primes.test.cpp
-  - Verify/AIZU_bigInt_difference.test.cpp
   - Verify/AIZU_bigInt_division.test.cpp
+  - Verify/AIZU_bigInt_difference.test.cpp
+  - Verify/LC_enumerate_primes.test.cpp
   - Verify/AIZU_bigInt_modulo.test.cpp
-  - Verify/LC_partition_function.test.cpp
+  - Verify/AIZU_bigInt_multiplication2.test.cpp
 documentation_of: Template/template.hpp
 layout: document
 redirect_from:
