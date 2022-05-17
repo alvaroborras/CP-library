@@ -23,3 +23,29 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<ll, ll> P;
+
+template<typename T1, typename T2>
+ostream& operator<<(ostream& os, const pair< T1, T2 >& p) {
+  os << p.first << " " << p.second;
+  return os;
+}
+
+template<typename T1, typename T2>
+istream& operator>>(istream& is, pair< T1, T2 >& p) {
+  is >> p.first >> p.second;
+  return is;
+}
+
+template<typename T>
+ostream& operator<<(ostream& os, const vector< T >& v) {
+  for (int i = 0; i < (int)v.size(); i++) {
+    os << v[i] << (i + 1 != (int)v.size()?" ":"");
+  }
+  return os;
+}
+
+template<typename T>
+istream& operator>>(istream& is, vector< T >& v) {
+  for (T& in : v) is >> in;
+  return is;
+}
