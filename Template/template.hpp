@@ -11,7 +11,7 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define outl(...) dump_func(__VA_ARGS__)
 #define outf(x) cout << fixed << setprecision(16) << (x) << nl
-
+#define fastio ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 #define nl "\n"
 #define pb push_back
 #define fi first

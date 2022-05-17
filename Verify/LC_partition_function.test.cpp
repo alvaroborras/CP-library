@@ -9,6 +9,7 @@ const int MOD = 998244353;
 using mint = ModInt<MOD>;
 
 int main() {
+  fastio;
   int N;
   cin >> N;
   cout << partition<FPS, mint>(N) << endl;

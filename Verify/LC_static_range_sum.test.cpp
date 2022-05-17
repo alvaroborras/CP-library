@@ -1,9 +1,9 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 
 #include "Template/template.hpp"
-// #include "Utility/fastIO.hpp"
 
 int main() {
+  fastio;
   int N, Q;
   cin >> N >> Q;
   vector<ll> a(N + 1);

@@ -49,7 +49,7 @@ struct PersistentArray {
 
   void build(const vector< T >& v) {
     root = nullptr;
-    for (int i = 0; i < v.size(); i++) {
+    for (int i = 0; i < (int)v.size(); i++) {
       root = build(root, v[i], i);
     }
   }
