@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/enumerate_primes"
 
-#include "../Template/template.hpp"
-// #include "../Utility/fastIO.hpp"
-#include "../Math/enumerate_primes.hpp"
+#include "Template/template.hpp"
+#include "Utility/fastIO.hpp"
+#include "Math/enumerate_primes.hpp"
 
 int main() {
   int N, A, B;
@@ -13,5 +13,7 @@ int main() {
     ans.emplace_back(d[i]);
   }
   cout << d.size() << " " << ans.size() << nl;
-  cout << ans << nl;
+  for (auto x : ans)
+    cout << x << " ";
+  cout << nl;
 }

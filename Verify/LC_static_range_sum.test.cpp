@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 
-#include "../Template/template.hpp"
-#include "../Utility/fastIO.hpp"
+#include "Template/template.hpp"
+#include "Utility/fastIO.hpp"
 
 int main() {
   int N, Q;
