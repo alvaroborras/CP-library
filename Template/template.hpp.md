@@ -46,6 +46,12 @@ data:
     path: Verify/LC_persistent_union_find.test.cpp
     title: Verify/LC_persistent_union_find.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_polynomial_taylor_shift.test.cpp
+    title: Verify/LC_polynomial_taylor_shift.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_power_formal_series.test.cpp
+    title: Verify/LC_power_formal_series.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_prime_factorization.test.cpp
     title: Verify/LC_prime_factorization.test.cpp
   - icon: ':heavy_check_mark:'
@@ -145,6 +151,7 @@ data:
   - Verify/LC_partition_function.test.cpp
   - Verify/LC_prime_factorization.test.cpp
   - Verify/AIZU_bigInt_addition.test.cpp
+  - Verify/LC_polynomial_taylor_shift.test.cpp
   - Verify/AOJ_DSL_2_D.test.cpp
   - Verify/LC_inversion_power_series.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
@@ -152,6 +159,7 @@ data:
   - Verify/AIZU_bigInt_difference.test.cpp
   - Verify/LC_convolution_mod.test.cpp
   - Verify/LC_static_range_sum.test.cpp
+  - Verify/LC_power_formal_series.test.cpp
   - Verify/LC_enumerate_primes.test.cpp
   - Verify/AIZU_bigInt_modulo.test.cpp
   - Verify/AIZU_bigInt_multiplication2.test.cpp

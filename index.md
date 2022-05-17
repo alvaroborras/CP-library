@@ -114,6 +114,12 @@ data:
       path: Verify/LC_persistent_union_find.test.cpp
       title: Verify/LC_persistent_union_find.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/LC_polynomial_taylor_shift.test.cpp
+      title: Verify/LC_polynomial_taylor_shift.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_power_formal_series.test.cpp
+      title: Verify/LC_power_formal_series.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
     - icon: ':heavy_check_mark:'
