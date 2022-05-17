@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Verify/AOJ_DSL_2_D.test.cpp
+    title: Verify/AOJ_DSL_2_D.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: Dual Segment Tree
     links: []
@@ -46,8 +49,9 @@ data:
   path: DataStructures/dualsegtree.hpp
   requiredBy: []
   timestamp: '2022-05-17 16:42:23+02:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Verify/AOJ_DSL_2_D.test.cpp
 documentation_of: DataStructures/dualsegtree.hpp
 layout: document
 redirect_from:

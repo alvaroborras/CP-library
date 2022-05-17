@@ -8,13 +8,13 @@ data:
       title: DP/cumulative-sum.hpp
   - name: DataStructures
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructures/dualsegtree.hpp
       title: Dual Segment Tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructures/persistent-array.hpp
       title: DataStructures/persistent-array.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructures/persistent-union-find.hpp
       title: DataStructures/persistent-union-find.hpp
     - icon: ':warning:'
@@ -25,10 +25,10 @@ data:
       title: DataStructures/union-find.hpp
   - name: Math
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
     - icon: ':heavy_check_mark:'
@@ -49,7 +49,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/partition.hpp
       title: Math/partition.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
     - icon: ':warning:'
@@ -91,25 +91,25 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_bigInt_multiplication2.test.cpp
       title: Verify/AIZU_bigInt_multiplication2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/AOJ_DSL_2_D.test.cpp
       title: Verify/AOJ_DSL_2_D.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_aplusb.test.cpp
       title: Verify/LC_aplusb.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_enumerate_primes.test.cpp
       title: Verify/LC_enumerate_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_partition_function.test.cpp
       title: Verify/LC_partition_function.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_persistent_union_find.test.cpp
       title: Verify/LC_persistent_union_find.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
 layout: toppage

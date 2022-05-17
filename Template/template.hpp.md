@@ -22,8 +22,26 @@ data:
     path: Verify/AIZU_bigInt_multiplication2.test.cpp
     title: Verify/AIZU_bigInt_multiplication2.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/AOJ_DSL_2_D.test.cpp
+    title: Verify/AOJ_DSL_2_D.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_aplusb.test.cpp
+    title: Verify/LC_aplusb.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_enumerate_primes.test.cpp
+    title: Verify/LC_enumerate_primes.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_partition_function.test.cpp
     title: Verify/LC_partition_function.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_persistent_union_find.test.cpp
+    title: Verify/LC_persistent_union_find.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_prime_factorization.test.cpp
+    title: Verify/LC_prime_factorization.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_static_range_sum.test.cpp
+    title: Verify/LC_static_range_sum.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -132,13 +150,19 @@ data:
   timestamp: '2022-05-17 17:12:10+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Verify/LC_partition_function.test.cpp
   - Verify/AIZU_bigInt_addition.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
-  - Verify/AIZU_bigInt_division.test.cpp
-  - Verify/AIZU_bigInt_difference.test.cpp
-  - Verify/AIZU_bigInt_modulo.test.cpp
   - Verify/AIZU_bigInt_multiplication2.test.cpp
+  - Verify/LC_enumerate_primes.test.cpp
+  - Verify/AIZU_bigInt_difference.test.cpp
+  - Verify/AOJ_DSL_2_D.test.cpp
+  - Verify/LC_static_range_sum.test.cpp
+  - Verify/AIZU_bigInt_division.test.cpp
+  - Verify/LC_prime_factorization.test.cpp
+  - Verify/AIZU_bigInt_modulo.test.cpp
+  - Verify/LC_persistent_union_find.test.cpp
+  - Verify/LC_partition_function.test.cpp
+  - Verify/LC_aplusb.test.cpp
 documentation_of: Template/template.hpp
 layout: document
 redirect_from:
