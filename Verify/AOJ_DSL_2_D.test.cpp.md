@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: DataStructures/dualsegtree.hpp
     title: Dual Segment Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
@@ -77,7 +77,7 @@ data:
     \ R++;\n      seg.update(L, R, x);\n    }\n    else {\n      cin >> x;\n     \
     \ cout << seg.query(x) << nl;\n    }\n  }\n  return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
-    \n\n#include \"Template/template.hpp\"\n#include \"DataStructures/dualsegtree.hpp\"\
+    \n\n#include \"../Template/template.hpp\"\n#include \"../DataStructures/dualsegtree.hpp\"\
     \n\nint f(int a, int b) {\n  if (b != INT32_MAX)\n    return b;\n  else\n    return\
     \ a;\n}\nint e() { return INT32_MAX; }\n\nint main() {\n  fastio;\n  int n, q;\n\
     \  cin >> n >> q;\n\n  DualSegmentTree<int, f, e> seg(n);\n  int c, L, R, x;\n\
@@ -90,7 +90,7 @@ data:
   isVerificationFile: true
   path: Verify/AOJ_DSL_2_D.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
+  timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/AOJ_DSL_2_D.test.cpp

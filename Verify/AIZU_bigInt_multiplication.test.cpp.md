@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   - icon: ':heavy_check_mark:'
@@ -165,16 +165,16 @@ data:
     \ 5 \"Verify/AIZU_bigInt_multiplication.test.cpp\"\n\nint main() {\n  bigint A,\
     \ B;\n  cin >> A >> B;\n  cout << A * B << endl;\n  return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/2/NTL_2_C\"\
-    \n\n#include \"Template/template.hpp\"\n#include \"Tools/bigint.hpp\"\n\nint main()\
-    \ {\n  bigint A, B;\n  cin >> A >> B;\n  cout << A * B << endl;\n  return 0;\n\
-    }"
+    \n\n#include \"../Template/template.hpp\"\n#include \"../Tools/bigint.hpp\"\n\n\
+    int main() {\n  bigint A, B;\n  cin >> A >> B;\n  cout << A * B << endl;\n  return\
+    \ 0;\n}"
   dependsOn:
   - Template/template.hpp
   - Tools/bigint.hpp
   isVerificationFile: true
   path: Verify/AIZU_bigInt_multiplication.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
+  timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/AIZU_bigInt_multiplication.test.cpp

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Math/fast_prime_factorization.hpp
     title: Math/fast_prime_factorization.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/factorize
@@ -124,9 +124,9 @@ data:
     \ ret.end());\n    cout << ret.size();\n    for (auto& x : ret) cout << ' ' <<\
     \ x;\n    cout << '\\n';\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/factorize\"\n\n#include\
-    \ \"Template/template.hpp\"\n#include \"Math/fast_prime_factorization.hpp\"\n\n\
-    int main() {\n  fastio;\n  int Q;\n  cin >> Q;\n\n  uint64_t X;\n  for (int q\
-    \ = 0; q < Q; ++q) {\n    cin >> X;\n    auto ret = fast_factorize::factorize(X);\n\
+    \ \"../Template/template.hpp\"\n#include \"../Math/fast_prime_factorization.hpp\"\
+    \n\nint main() {\n  fastio;\n  int Q;\n  cin >> Q;\n\n  uint64_t X;\n  for (int\
+    \ q = 0; q < Q; ++q) {\n    cin >> X;\n    auto ret = fast_factorize::factorize(X);\n\
     \    sort(ret.begin(), ret.end());\n    cout << ret.size();\n    for (auto& x\
     \ : ret) cout << ' ' << x;\n    cout << '\\n';\n  }\n}\n"
   dependsOn:
@@ -135,8 +135,8 @@ data:
   isVerificationFile: true
   path: Verify/LC_prime_factorization.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-05-18 08:11:38+02:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Verify/LC_prime_factorization.test.cpp
 layout: document

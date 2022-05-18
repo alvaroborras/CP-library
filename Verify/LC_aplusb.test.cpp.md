@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
@@ -54,14 +54,14 @@ data:
     \n\nint main() {\n  fastio;\n  int a, b;\n  cin >> a >> b;\n  cout << a + b <<\
     \ nl;\n  return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n\n#include \"\
-    Template/template.hpp\"\n\nint main() {\n  fastio;\n  int a, b;\n  cin >> a >>\
-    \ b;\n  cout << a + b << nl;\n  return 0;\n}"
+    ../Template/template.hpp\"\n\nint main() {\n  fastio;\n  int a, b;\n  cin >> a\
+    \ >> b;\n  cout << a + b << nl;\n  return 0;\n}"
   dependsOn:
   - Template/template.hpp
   isVerificationFile: true
   path: Verify/LC_aplusb.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
+  timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_aplusb.test.cpp

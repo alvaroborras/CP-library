@@ -23,22 +23,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/formal-power-series-friendly-ntt.hpp
       title: Math/formal-power-series-friendly-ntt.hpp
     - icon: ':warning:'
       path: Math/is_prime.hpp
       title: Math/is_prime.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/modint.hpp
       title: Math/modint.hpp
     - icon: ':warning:'
       path: Math/moebius_mu.hpp
       title: Math/moebius_mu.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/number-theoretic-transform-friendly-mod-int.hpp
       title: Math/number-theoretic-transform-friendly-mod-int.hpp
     - icon: ':heavy_check_mark:'
@@ -50,12 +50,12 @@ data:
     - icon: ':warning:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Math/stirling-second.hpp
       title: Math/stirling-second.hpp
   - name: Template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Template/template.hpp
       title: Template/template.hpp
   - name: Tools
@@ -119,13 +119,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_power_formal_series.test.cpp
       title: Verify/LC_power_formal_series.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_stirling_numbers_second_kind.test.cpp
       title: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: toppage

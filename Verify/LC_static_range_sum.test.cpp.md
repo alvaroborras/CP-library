@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_sum
@@ -57,8 +57,8 @@ data:
     \ for (int i = 0, l, r; i < Q; ++i) {\n    cin >> l >> r;\n    cout << a[r] -\
     \ a[l] << nl;\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n\
-    #include \"Template/template.hpp\"\n\nint main() {\n  fastio;\n  int N, Q;\n \
-    \ cin >> N >> Q;\n  vector<uint64_t> a(N + 1);\n  for (int i = 1; i <= N; ++i)\
+    #include \"../Template/template.hpp\"\n\nint main() {\n  fastio;\n  int N, Q;\n\
+    \  cin >> N >> Q;\n  vector<uint64_t> a(N + 1);\n  for (int i = 1; i <= N; ++i)\
     \ {\n    cin >> a[i];\n    a[i] += a[i - 1];\n  }\n  for (int i = 0, l, r; i <\
     \ Q; ++i) {\n    cin >> l >> r;\n    cout << a[r] - a[l] << nl;\n  }\n}"
   dependsOn:
@@ -66,8 +66,8 @@ data:
   isVerificationFile: true
   path: Verify/LC_static_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-05-18 08:11:38+02:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Verify/LC_static_range_sum.test.cpp
 layout: document

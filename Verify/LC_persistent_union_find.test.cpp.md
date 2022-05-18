@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: DataStructures/persistent-union-find.hpp
     title: DataStructures/persistent-union-find.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
@@ -90,13 +90,13 @@ data:
     \ 0) {\n      uf[i] = uf[k];\n      uf[i].unite(u, v);\n    }\n    else {\n  \
     \    cout << (uf[k].find(u) == uf[k].find(v)) << \"\\n\";\n    }\n  }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/persistent_unionfind\"\n\
-    \n#include \"Template/template.hpp\"\n#include \"DataStructures/persistent-array.hpp\"\
-    \n#include \"DataStructures/persistent-union-find.hpp\"\n\nint main() {\n  fastio;\n\
-    \  int N, Q;\n  cin >> N >> Q;\n  vector<PersistentUnionFind> uf(Q + 1);\n  uf[0]\
-    \ = PersistentUnionFind(N);\n  for (int i = 1; i <= Q; i++) {\n    int t, k, u,\
-    \ v;\n    cin >> t >> k >> u >> v;\n    ++k;\n    if (t == 0) {\n      uf[i] =\
-    \ uf[k];\n      uf[i].unite(u, v);\n    }\n    else {\n      cout << (uf[k].find(u)\
-    \ == uf[k].find(v)) << \"\\n\";\n    }\n  }\n}"
+    \n#include \"../Template/template.hpp\"\n#include \"../DataStructures/persistent-array.hpp\"\
+    \n#include \"../DataStructures/persistent-union-find.hpp\"\n\nint main() {\n \
+    \ fastio;\n  int N, Q;\n  cin >> N >> Q;\n  vector<PersistentUnionFind> uf(Q +\
+    \ 1);\n  uf[0] = PersistentUnionFind(N);\n  for (int i = 1; i <= Q; i++) {\n \
+    \   int t, k, u, v;\n    cin >> t >> k >> u >> v;\n    ++k;\n    if (t == 0) {\n\
+    \      uf[i] = uf[k];\n      uf[i].unite(u, v);\n    }\n    else {\n      cout\
+    \ << (uf[k].find(u) == uf[k].find(v)) << \"\\n\";\n    }\n  }\n}"
   dependsOn:
   - Template/template.hpp
   - DataStructures/persistent-array.hpp
@@ -104,7 +104,7 @@ data:
   isVerificationFile: true
   path: Verify/LC_persistent_union_find.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
+  timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_persistent_union_find.test.cpp

@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/prime-table.hpp
     title: Math/prime-table.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
@@ -72,8 +72,8 @@ data:
     \  }\n  cout << d.size() << \" \" << ans.size() << nl;\n  for (auto x : ans)\n\
     \    cout << x << \" \";\n  cout << nl;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n\
-    #include \"Template/template.hpp\"\n#include \"Math/enumerate_primes.hpp\"\n\n\
-    int main() {\n  fastio;\n  int N, A, B;\n  cin >> N >> A >> B;\n  vector<int>\
+    #include \"../Template/template.hpp\"\n#include \"../Math/enumerate_primes.hpp\"\
+    \n\nint main() {\n  fastio;\n  int N, A, B;\n  cin >> N >> A >> B;\n  vector<int>\
     \ d = enumerate_primes(N);\n  vector<int> ans;\n  for (size_t i = B; i < d.size();\
     \ i += A) {\n    ans.emplace_back(d[i]);\n  }\n  cout << d.size() << \" \" <<\
     \ ans.size() << nl;\n  for (auto x : ans)\n    cout << x << \" \";\n  cout <<\
@@ -85,7 +85,7 @@ data:
   isVerificationFile: true
   path: Verify/LC_enumerate_primes.test.cpp
   requiredBy: []
-  timestamp: '2022-05-17 22:47:24+02:00'
+  timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_enumerate_primes.test.cpp
