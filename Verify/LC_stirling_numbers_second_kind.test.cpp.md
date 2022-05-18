@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/stirling-second.hpp
     title: Math/stirling-second.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []

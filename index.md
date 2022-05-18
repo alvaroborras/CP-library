@@ -12,6 +12,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructures/persistent-union-find.hpp
       title: DataStructures/persistent-union-find.hpp
+    - icon: ':x:'
+      path: DataStructures/segment-tree.hpp
+      title: DataStructures/segment-tree.hpp
     - icon: ':warning:'
       path: DataStructures/union-find-undo.hpp
       title: DataStructures/union-find-undo.hpp
@@ -58,7 +61,7 @@ data:
       title: Math/stirling-second.hpp
   - name: Template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Template/template.hpp
       title: Template/template.hpp
   - name: Tools
@@ -92,6 +95,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_bigInt_multiplication2.test.cpp
       title: Verify/AIZU_bigInt_multiplication2.test.cpp
+    - icon: ':x:'
+      path: Verify/AIZU_range-min-query.test.cpp
+      title: Verify/AIZU_range-min-query.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_union_find.test.cpp
       title: Verify/AIZU_union_find.test.cpp

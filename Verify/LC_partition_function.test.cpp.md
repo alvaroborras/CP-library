@@ -13,7 +13,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/partition.hpp
     title: Math/partition.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []

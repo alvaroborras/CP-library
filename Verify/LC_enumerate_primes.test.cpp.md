@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/prime-table.hpp
     title: Math/prime-table.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []

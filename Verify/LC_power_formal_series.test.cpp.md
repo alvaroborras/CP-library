@@ -10,7 +10,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/number-theoretic-transform-friendly-mod-int.hpp
     title: Math/number-theoretic-transform-friendly-mod-int.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
