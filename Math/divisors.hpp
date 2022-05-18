@@ -1,0 +1,12 @@
+// return a vector containing the divisors of n
+vector<uint64_t> divisor(uint64_t n) {
+  vector<uint64_t> ret;
+  for (uint64_t i = 1; i * i <= n; i++) {
+    if (n % i == 0) {
+      ret.push_back(i);
+      if (i * i != n) ret.push_back(n / i);
+    }
+  }
+  sort(begin(ret), end(ret));
+  return ret;
+}
