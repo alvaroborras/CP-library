@@ -15,30 +15,33 @@ data:
     - icon: ':warning:'
       path: DataStructures/union-find-undo.hpp
       title: DataStructures/union-find-undo.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructures/union-find.hpp
       title: DataStructures/union-find.hpp
+    - icon: ':heavy_check_mark:'
+      path: DataStructures/weighted-union-find.hpp
+      title: DataStructures/weighted-union-find.hpp
   - name: Math
     pages:
     - icon: ':heavy_check_mark:'
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Math/formal-power-series-friendly-ntt.hpp
       title: Math/formal-power-series-friendly-ntt.hpp
     - icon: ':warning:'
       path: Math/is_prime.hpp
       title: Math/is_prime.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Math/modint.hpp
       title: Math/modint.hpp
     - icon: ':warning:'
       path: Math/moebius_mu.hpp
       title: Math/moebius_mu.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Math/number-theoretic-transform-friendly-mod-int.hpp
       title: Math/number-theoretic-transform-friendly-mod-int.hpp
     - icon: ':heavy_check_mark:'
@@ -50,12 +53,12 @@ data:
     - icon: ':warning:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Math/stirling-second.hpp
       title: Math/stirling-second.hpp
   - name: Template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Template/template.hpp
       title: Template/template.hpp
   - name: Tools
@@ -90,6 +93,12 @@ data:
       path: Verify/AIZU_bigInt_multiplication2.test.cpp
       title: Verify/AIZU_bigInt_multiplication2.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_union_find.test.cpp
+      title: Verify/AIZU_union_find.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_weighted_union_find.test.cpp
+      title: Verify/AIZU_weighted_union_find.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/AOJ_DSL_2_D.test.cpp
       title: Verify/AOJ_DSL_2_D.test.cpp
     - icon: ':heavy_check_mark:'
@@ -119,13 +128,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_power_formal_series.test.cpp
       title: Verify/LC_power_formal_series.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_stirling_numbers_second_kind.test.cpp
       title: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: toppage

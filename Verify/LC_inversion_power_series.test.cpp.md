@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/formal-power-series-friendly-ntt.hpp
     title: Math/formal-power-series-friendly-ntt.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/modint.hpp
     title: Math/modint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/number-theoretic-transform-friendly-mod-int.hpp
     title: Math/number-theoretic-transform-friendly-mod-int.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []

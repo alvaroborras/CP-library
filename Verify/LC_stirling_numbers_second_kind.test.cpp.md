@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/formal-power-series-friendly-ntt.hpp
     title: Math/formal-power-series-friendly-ntt.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/modint.hpp
     title: Math/modint.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Math/number-theoretic-transform-friendly-mod-int.hpp
     title: Math/number-theoretic-transform-friendly-mod-int.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Math/stirling-second.hpp
     title: Math/stirling-second.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/stirling_number_of_the_second_kind
@@ -309,7 +309,7 @@ data:
   path: Verify/LC_stirling_numbers_second_kind.test.cpp
   requiredBy: []
   timestamp: '2022-05-18 08:11:38+02:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: document
