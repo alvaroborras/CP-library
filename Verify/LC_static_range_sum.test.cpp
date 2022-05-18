@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 
-#include "Template/template.hpp"
+#include "../Template/template.hpp"
 
 int main() {
   fastio;

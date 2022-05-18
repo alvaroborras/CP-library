@@ -1,6 +1,5 @@
-template<typename Mint>
+template <typename Mint>
 struct NumberTheoreticTransformFriendlyModInt {
-
   static vector<Mint> roots, iroots, rate3, irate3;
   static int max_base;
 
@@ -42,7 +41,7 @@ struct NumberTheoreticTransformFriendlyModInt {
     }
   }
 
-  static void ntt(vector< Mint >& a) {
+  static void ntt(vector<Mint>& a) {
     init();
     const int n = (int)a.size();
     assert((n & (n - 1)) == 0);
@@ -52,7 +51,6 @@ struct NumberTheoreticTransformFriendlyModInt {
     Mint imag = roots[2];
     if (h & 1) {
       int p = 1 << (h - 1);
-      Mint rot = 1;
       for (int i = 0; i < p; i++) {
         auto r = a[i + p];
         a[i + p] = a[i] - r;
@@ -62,7 +60,7 @@ struct NumberTheoreticTransformFriendlyModInt {
     }
     for (; len + 1 < h; len += 2) {
       int p = 1 << (h - len - 2);
-      { // s = 0
+      {
         for (int i = 0; i < p; i++) {
           auto a0 = a[i];
           auto a1 = a[i + p];
@@ -102,7 +100,7 @@ struct NumberTheoreticTransformFriendlyModInt {
     }
   }
 
-  static void intt(vector< Mint >& a, bool f = true) {
+  static void intt(vector<Mint>& a, bool f = true) {
     init();
     const int n = (int)a.size();
     assert((n & (n - 1)) == 0);
@@ -112,7 +110,7 @@ struct NumberTheoreticTransformFriendlyModInt {
     Mint iimag = iroots[2];
     for (; len > 1; len -= 2) {
       int p = 1 << (h - len);
-      { // s = 0
+      {  // s = 0
         for (int i = 0; i < p; i++) {
           auto a0 = a[i];
           auto a1 = a[i + 1 * p];
@@ -164,7 +162,7 @@ struct NumberTheoreticTransformFriendlyModInt {
     }
   }
 
-  static vector< Mint > multiply(vector< Mint > a, vector< Mint > b) {
+  static vector<Mint> multiply(vector<Mint> a, vector<Mint> b) {
     int need = a.size() + b.size() - 1;
     int nbase = 1;
     while ((1 << nbase) < need) nbase++;
@@ -181,13 +179,17 @@ struct NumberTheoreticTransformFriendlyModInt {
   }
 };
 
-template< typename Mint >
-vector< Mint > NumberTheoreticTransformFriendlyModInt< Mint >::roots = vector< Mint >();
-template< typename Mint >
-vector< Mint > NumberTheoreticTransformFriendlyModInt< Mint >::iroots = vector< Mint >();
-template< typename Mint >
-vector< Mint > NumberTheoreticTransformFriendlyModInt< Mint >::rate3 = vector< Mint >();
-template< typename Mint >
-vector< Mint > NumberTheoreticTransformFriendlyModInt< Mint >::irate3 = vector< Mint >();
-template< typename Mint >
-int NumberTheoreticTransformFriendlyModInt< Mint >::max_base = 0;
+template <typename Mint>
+vector<Mint> NumberTheoreticTransformFriendlyModInt<Mint>::roots =
+    vector<Mint>();
+template <typename Mint>
+vector<Mint> NumberTheoreticTransformFriendlyModInt<Mint>::iroots =
+    vector<Mint>();
+template <typename Mint>
+vector<Mint> NumberTheoreticTransformFriendlyModInt<Mint>::rate3 =
+    vector<Mint>();
+template <typename Mint>
+vector<Mint> NumberTheoreticTransformFriendlyModInt<Mint>::irate3 =
+    vector<Mint>();
+template <typename Mint>
+int NumberTheoreticTransformFriendlyModInt<Mint>::max_base = 0;

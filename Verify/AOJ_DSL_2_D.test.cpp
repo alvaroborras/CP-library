@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D"
 
-#include "Template/template.hpp"
-#include "DataStructures/dualsegtree.hpp"
+#include "../Template/template.hpp"
+#include "../DataStructures/dualsegtree.hpp"
 
 int f(int a, int b) {
   if (b != INT32_MAX)
