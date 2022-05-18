@@ -30,6 +30,9 @@ data:
   - name: Math
     pages:
     - icon: ':heavy_check_mark:'
+      path: Math/divisors.hpp
+      title: Math/divisors.hpp
+    - icon: ':heavy_check_mark:'
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
     - icon: ':heavy_check_mark:'
@@ -42,6 +45,9 @@ data:
       path: Math/is_prime.hpp
       title: Math/is_prime.hpp
     - icon: ':heavy_check_mark:'
+      path: Math/kth-root-integer.hpp
+      title: Math/kth-root-integer.hpp
+    - icon: ':heavy_check_mark:'
       path: Math/modint.hpp
       title: Math/modint.hpp
     - icon: ':warning:'
@@ -53,6 +59,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/partition.hpp
       title: Math/partition.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/prime-count.hpp
+      title: Math/prime-count.hpp
     - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
@@ -98,6 +107,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_bigInt_multiplication2.test.cpp
       title: Verify/AIZU_bigInt_multiplication2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_divisors.test.cpp
+      title: Verify/AIZU_divisors.test.cpp
     - icon: ':x:'
       path: Verify/AIZU_range-min-query.test.cpp
       title: Verify/AIZU_range-min-query.test.cpp
@@ -119,6 +131,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_convolution_mod.test.cpp
       title: Verify/LC_convolution_mod.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_counting_primes.test.cpp
+      title: Verify/LC_counting_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_division_polynomials.test.cpp
       title: Verify/LC_division_polynomials.test.cpp

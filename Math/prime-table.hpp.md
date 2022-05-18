@@ -5,7 +5,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/enumerate_primes.hpp
     title: Math/enumerate_primes.hpp
+  - icon: ':heavy_check_mark:'
+    path: Math/prime-count.hpp
+    title: Math/prime-count.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_counting_primes.test.cpp
+    title: Verify/LC_counting_primes.test.cpp
   - icon: ':heavy_check_mark:'
     path: Verify/LC_enumerate_primes.test.cpp
     title: Verify/LC_enumerate_primes.test.cpp
@@ -28,10 +34,12 @@ data:
   isVerificationFile: false
   path: Math/prime-table.hpp
   requiredBy:
+  - Math/prime-count.hpp
   - Math/enumerate_primes.hpp
   timestamp: '2022-05-17 16:42:23+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - Verify/LC_counting_primes.test.cpp
   - Verify/LC_enumerate_primes.test.cpp
 documentation_of: Math/prime-table.hpp
 layout: document
