@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_prime_factorization.test.cpp
     title: Verify/LC_prime_factorization.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/fast_prime_factorization.hpp\"\n\nnamespace fast_factorize\
@@ -143,7 +143,7 @@ data:
   path: Math/fast_prime_factorization.hpp
   requiredBy: []
   timestamp: '2022-05-17 16:32:03+02:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_prime_factorization.test.cpp
 documentation_of: Math/fast_prime_factorization.hpp

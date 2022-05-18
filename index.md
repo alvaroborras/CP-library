@@ -41,10 +41,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/extgcd.hpp
       title: Math/extgcd.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Math/formal-power-series-friendly-ntt.hpp
       title: Math/formal-power-series-friendly-ntt.hpp
     - icon: ':warning:'
@@ -53,15 +53,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/kth-root-integer.hpp
       title: Math/kth-root-integer.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Math/modint.hpp
       title: Math/modint.hpp
     - icon: ':warning:'
       path: Math/moebius_mu.hpp
       title: Math/moebius_mu.hpp
-    - icon: ':question:'
+    - icon: ':warning:'
+      path: Math/montgomery-mod-int.hpp
+      title: Math/montgomery-mod-int.hpp
+    - icon: ':heavy_check_mark:'
       path: Math/number-theoretic-transform-friendly-mod-int.hpp
       title: Math/number-theoretic-transform-friendly-mod-int.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/number-theoretic-transform.hpp
+      title: Math/number-theoretic-transform.hpp
     - icon: ':heavy_check_mark:'
       path: Math/partition.hpp
       title: Math/partition.hpp
@@ -71,15 +77,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Math/stirling-second.hpp
       title: Math/stirling-second.hpp
   - name: Template
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Template/template.hpp
       title: Template/template.hpp
   - name: Tools
@@ -92,6 +98,11 @@ data:
     - icon: ':warning:'
       path: Utility/fastio.hpp
       title: Utility/fastio.hpp
+  - name: Verify
+    pages:
+    - icon: ':warning:'
+      path: Verify/LC_convolution_mod.test_3.cpp
+      title: Verify/LC_convolution_mod.test_3.cpp
   verificationCategories:
   - name: Verify
     pages:
@@ -147,6 +158,9 @@ data:
       path: Verify/LC_convolution_mod.test.cpp
       title: Verify/LC_convolution_mod.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/LC_convolution_mod_2.test.cpp
+      title: Verify/LC_convolution_mod_2.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_counting_primes.test.cpp
       title: Verify/LC_counting_primes.test.cpp
     - icon: ':heavy_check_mark:'
@@ -173,16 +187,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_power_formal_series.test.cpp
       title: Verify/LC_power_formal_series.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization_2.test.cpp
       title: Verify/LC_prime_factorization_2.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_stirling_numbers_second_kind.test.cpp
       title: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: toppage

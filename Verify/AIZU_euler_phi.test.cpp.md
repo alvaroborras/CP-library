@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/euler-phi.hpp
     title: Math/euler-phi.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []

@@ -10,6 +10,9 @@ data:
     path: Verify/LC_convolution_mod.test.cpp
     title: Verify/LC_convolution_mod.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_convolution_mod_2.test.cpp
+    title: Verify/LC_convolution_mod_2.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_division_polynomials.test.cpp
     title: Verify/LC_division_polynomials.test.cpp
   - icon: ':heavy_check_mark:'
@@ -24,12 +27,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: Verify/LC_power_formal_series.test.cpp
     title: Verify/LC_power_formal_series.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_stirling_numbers_second_kind.test.cpp
     title: Verify/LC_stirling_numbers_second_kind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/modint.hpp\"\ntemplate<int mod>\nstruct ModInt {\n\
@@ -82,12 +85,13 @@ data:
   path: Math/modint.hpp
   requiredBy: []
   timestamp: '2022-05-17 17:12:10+02:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
   - Verify/LC_division_polynomials.test.cpp
   - Verify/LC_partition_function.test.cpp
   - Verify/LC_polynomial_taylor_shift.test.cpp
+  - Verify/LC_convolution_mod_2.test.cpp
   - Verify/LC_inversion_power_series.test.cpp
   - Verify/LC_convolution_mod.test.cpp
   - Verify/LC_power_formal_series.test.cpp
