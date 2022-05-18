@@ -8,7 +8,7 @@ data:
       title: DataStructures/binary-indexed-tree.hpp
     - icon: ':heavy_check_mark:'
       path: DataStructures/dualsegtree.hpp
-      title: Dual Segment Tree
+      title: DataStructures/dualsegtree.hpp
     - icon: ':heavy_check_mark:'
       path: DataStructures/persistent-array.hpp
       title: DataStructures/persistent-array.hpp
@@ -105,14 +105,14 @@ data:
       path: Verify/AIZU_range_sum_query.test.cpp
       title: Verify/AIZU_range_sum_query.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_range_update_query.test.cpp
+      title: Verify/AIZU_range_update_query.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/AIZU_union_find.test.cpp
       title: Verify/AIZU_union_find.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_weighted_union_find.test.cpp
       title: Verify/AIZU_weighted_union_find.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: Verify/AOJ_DSL_2_D.test.cpp
-      title: Verify/AOJ_DSL_2_D.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_aplusb.test.cpp
       title: Verify/LC_aplusb.test.cpp

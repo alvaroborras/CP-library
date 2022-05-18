@@ -192,13 +192,13 @@ data:
   timestamp: '2022-05-18 08:11:38+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Verify/LC_convolution_mod.test.cpp
-  - Verify/LC_power_formal_series.test.cpp
   - Verify/LC_stirling_numbers_second_kind.test.cpp
-  - Verify/LC_inversion_power_series.test.cpp
-  - Verify/LC_polynomial_taylor_shift.test.cpp
   - Verify/LC_division_polynomials.test.cpp
   - Verify/LC_partition_function.test.cpp
+  - Verify/LC_polynomial_taylor_shift.test.cpp
+  - Verify/LC_inversion_power_series.test.cpp
+  - Verify/LC_convolution_mod.test.cpp
+  - Verify/LC_power_formal_series.test.cpp
 documentation_of: Math/number-theoretic-transform-friendly-mod-int.hpp
 layout: document
 redirect_from:

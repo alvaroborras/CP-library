@@ -28,14 +28,14 @@ data:
     path: Verify/AIZU_range_sum_query.test.cpp
     title: Verify/AIZU_range_sum_query.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/AIZU_range_update_query.test.cpp
+    title: Verify/AIZU_range_update_query.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/AIZU_union_find.test.cpp
     title: Verify/AIZU_union_find.test.cpp
   - icon: ':heavy_check_mark:'
     path: Verify/AIZU_weighted_union_find.test.cpp
     title: Verify/AIZU_weighted_union_find.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: Verify/AOJ_DSL_2_D.test.cpp
-    title: Verify/AOJ_DSL_2_D.test.cpp
   - icon: ':heavy_check_mark:'
     path: Verify/LC_aplusb.test.cpp
     title: Verify/LC_aplusb.test.cpp
@@ -156,29 +156,29 @@ data:
   timestamp: '2022-05-17 22:47:24+02:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - Verify/LC_convolution_mod.test.cpp
-  - Verify/AIZU_bigInt_addition.test.cpp
-  - Verify/LC_power_formal_series.test.cpp
-  - Verify/AIZU_weighted_union_find.test.cpp
-  - Verify/AIZU_bigInt_multiplication.test.cpp
-  - Verify/AIZU_range_sum_query.test.cpp
-  - Verify/AIZU_union_find.test.cpp
-  - Verify/AIZU_bigInt_multiplication2.test.cpp
   - Verify/LC_stirling_numbers_second_kind.test.cpp
-  - Verify/LC_enumerate_primes.test.cpp
-  - Verify/LC_inversion_power_series.test.cpp
-  - Verify/AIZU_bigInt_difference.test.cpp
-  - Verify/AIZU_range-min-query.test.cpp
-  - Verify/AOJ_DSL_2_D.test.cpp
-  - Verify/LC_static_range_sum.test.cpp
-  - Verify/AIZU_bigInt_division.test.cpp
-  - Verify/LC_prime_factorization.test.cpp
-  - Verify/LC_polynomial_taylor_shift.test.cpp
-  - Verify/AIZU_bigInt_modulo.test.cpp
-  - Verify/LC_division_polynomials.test.cpp
-  - Verify/LC_persistent_union_find.test.cpp
-  - Verify/LC_partition_function.test.cpp
+  - Verify/AIZU_union_find.test.cpp
   - Verify/LC_aplusb.test.cpp
+  - Verify/LC_persistent_union_find.test.cpp
+  - Verify/LC_division_polynomials.test.cpp
+  - Verify/LC_partition_function.test.cpp
+  - Verify/AIZU_range-min-query.test.cpp
+  - Verify/AIZU_weighted_union_find.test.cpp
+  - Verify/LC_prime_factorization.test.cpp
+  - Verify/AIZU_bigInt_addition.test.cpp
+  - Verify/LC_polynomial_taylor_shift.test.cpp
+  - Verify/LC_inversion_power_series.test.cpp
+  - Verify/AIZU_bigInt_multiplication.test.cpp
+  - Verify/AIZU_range_update_query.test.cpp
+  - Verify/AIZU_range_sum_query.test.cpp
+  - Verify/AIZU_bigInt_division.test.cpp
+  - Verify/AIZU_bigInt_difference.test.cpp
+  - Verify/LC_convolution_mod.test.cpp
+  - Verify/LC_static_range_sum.test.cpp
+  - Verify/LC_power_formal_series.test.cpp
+  - Verify/LC_enumerate_primes.test.cpp
+  - Verify/AIZU_bigInt_modulo.test.cpp
+  - Verify/AIZU_bigInt_multiplication2.test.cpp
 documentation_of: Template/template.hpp
 layout: document
 redirect_from:
