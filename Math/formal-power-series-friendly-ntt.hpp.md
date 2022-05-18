@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Math/number-theoretic-transform-friendly-mod-int.hpp
     title: Math/number-theoretic-transform-friendly-mod-int.hpp
   _extendedRequiredBy: []
@@ -24,12 +24,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: Verify/LC_power_formal_series.test.cpp
     title: Verify/LC_power_formal_series.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_stirling_numbers_second_kind.test.cpp
     title: Verify/LC_stirling_numbers_second_kind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links:
     - https://judge.yosupo.jp/problem/convolution_mod
@@ -367,7 +367,7 @@ data:
   path: Math/formal-power-series-friendly-ntt.hpp
   requiredBy: []
   timestamp: '2022-05-18 08:11:38+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
   - Verify/LC_division_polynomials.test.cpp

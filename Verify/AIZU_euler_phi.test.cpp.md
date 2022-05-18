@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: Math/divisors.hpp
-    title: Math/divisors.hpp
+    path: Math/euler-phi.hpp
+    title: Math/euler-phi.hpp
   - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
@@ -14,10 +14,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_D
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D
-  bundledCode: "#line 1 \"Verify/AIZU_divisors.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D\"\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_D
+  bundledCode: "#line 1 \"Verify/AIZU_euler_phi.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_D\"\
     \n\n#line 1 \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n\
     #include <cstdio>\n#include <cmath>\n#include <ctime>\n#include <cstdlib>\n#include\
     \ <cassert>\n#include <vector>\n#include <list>\n#include <stack>\n#include <queue>\n\
@@ -54,32 +54,29 @@ data:
     \ typename... Args >\n  decltype(auto) operator()(Args &&... args) const {\n \
     \   return F::operator()(*this, forward< Args >(args)...);\n  }\n};\n\ntemplate<\
     \ typename F >\ninline decltype(auto) MFP(F&& f) {\n  return FixPoint< F >{forward<\
-    \ F >(f)};\n}\n#line 1 \"Math/divisors.hpp\"\n// return a vector containing the\
-    \ divisors of n\nvector<uint64_t> divisor(uint64_t n) {\n  vector<uint64_t> ret;\n\
-    \  for (uint64_t i = 1; i * i <= n; i++) {\n    if (n % i == 0) {\n      ret.push_back(i);\n\
-    \      if (i * i != n) ret.push_back(n / i);\n    }\n  }\n  sort(begin(ret), end(ret));\n\
-    \  return ret;\n}\n#line 5 \"Verify/AIZU_divisors.test.cpp\"\n\nint main() {\n\
-    \  fastio;\n\n  uint64_t A, B, C;\n  cin >> A >> B >> C;\n  uint32_t ret = 0;\n\
-    \  for (uint64_t& p : divisor(C)) {\n    ret += A <= p and p <= B;\n  }\n  cout\
-    \ << ret << nl;\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D\"\
-    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/divisors.hpp\"\n\
-    \nint main() {\n  fastio;\n\n  uint64_t A, B, C;\n  cin >> A >> B >> C;\n  uint32_t\
-    \ ret = 0;\n  for (uint64_t& p : divisor(C)) {\n    ret += A <= p and p <= B;\n\
-    \  }\n  cout << ret << nl;\n}"
+    \ F >(f)};\n}\n#line 1 \"Math/euler-phi.hpp\"\n/**\n * Euler's totient function\n\
+    \ */\ntemplate<typename T>\nT euler_phi(T n) {\n  T ret = n;\n  for (T i = 2;\
+    \ i * i <= n; i++) {\n    if (n % i == 0) {\n      ret -= ret / i;\n      while\
+    \ (n % i == 0) n /= i;\n    }\n  }\n  if (n > 1) ret -= ret / n;\n  return ret;\n\
+    }\n#line 5 \"Verify/AIZU_euler_phi.test.cpp\"\n\nint main() {\n\n  uint32_t N;\n\
+    \  cin >> N;\n  cout << euler_phi(N) << nl;\n\n  return 0;\n}\n"
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_D\"\
+    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/euler-phi.hpp\"\n\
+    \nint main() {\n\n  uint32_t N;\n  cin >> N;\n  cout << euler_phi(N) << nl;\n\n\
+    \  return 0;\n}"
   dependsOn:
   - Template/template.hpp
-  - Math/divisors.hpp
+  - Math/euler-phi.hpp
   isVerificationFile: true
-  path: Verify/AIZU_divisors.test.cpp
+  path: Verify/AIZU_euler_phi.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 14:29:14+02:00'
+  timestamp: '2022-05-18 14:44:19+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Verify/AIZU_divisors.test.cpp
+documentation_of: Verify/AIZU_euler_phi.test.cpp
 layout: document
 redirect_from:
-- /verify/Verify/AIZU_divisors.test.cpp
-- /verify/Verify/AIZU_divisors.test.cpp.html
-title: Verify/AIZU_divisors.test.cpp
+- /verify/Verify/AIZU_euler_phi.test.cpp
+- /verify/Verify/AIZU_euler_phi.test.cpp.html
+title: Verify/AIZU_euler_phi.test.cpp
 ---

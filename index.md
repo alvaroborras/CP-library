@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructures/persistent-union-find.hpp
       title: DataStructures/persistent-union-find.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructures/segment-tree.hpp
       title: DataStructures/segment-tree.hpp
     - icon: ':warning:'
@@ -36,9 +36,15 @@ data:
       path: Math/enumerate_primes.hpp
       title: Math/enumerate_primes.hpp
     - icon: ':heavy_check_mark:'
+      path: Math/euler-phi.hpp
+      title: Math/euler-phi.hpp
+    - icon: ':heavy_check_mark:'
+      path: Math/extgcd.hpp
+      title: Math/extgcd.hpp
+    - icon: ':x:'
       path: Math/fast_prime_factorization.hpp
       title: Math/fast_prime_factorization.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/formal-power-series-friendly-ntt.hpp
       title: Math/formal-power-series-friendly-ntt.hpp
     - icon: ':warning:'
@@ -47,13 +53,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/kth-root-integer.hpp
       title: Math/kth-root-integer.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/modint.hpp
       title: Math/modint.hpp
     - icon: ':warning:'
       path: Math/moebius_mu.hpp
       title: Math/moebius_mu.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Math/number-theoretic-transform-friendly-mod-int.hpp
       title: Math/number-theoretic-transform-friendly-mod-int.hpp
     - icon: ':heavy_check_mark:'
@@ -65,10 +71,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Math/stirling-second.hpp
       title: Math/stirling-second.hpp
   - name: Template
@@ -110,7 +116,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_divisors.test.cpp
       title: Verify/AIZU_divisors.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_euler_phi.test.cpp
+      title: Verify/AIZU_euler_phi.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_extended_gcd.test.cpp
+      title: Verify/AIZU_extended_gcd.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_mod_power.test.cpp
+      title: Verify/AIZU_mod_power.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/AIZU_range-min-query.test.cpp
       title: Verify/AIZU_range-min-query.test.cpp
     - icon: ':heavy_check_mark:'
@@ -144,6 +159,9 @@ data:
       path: Verify/LC_inversion_power_series.test.cpp
       title: Verify/LC_inversion_power_series.test.cpp
     - icon: ':heavy_check_mark:'
+      path: Verify/LC_kth_root_integer.test.cpp
+      title: Verify/LC_kth_root_integer.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Verify/LC_partition_function.test.cpp
       title: Verify/LC_partition_function.test.cpp
     - icon: ':heavy_check_mark:'
@@ -155,16 +173,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_power_formal_series.test.cpp
       title: Verify/LC_power_formal_series.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_prime_factorization_2.test.cpp
       title: Verify/LC_prime_factorization_2.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Verify/LC_stirling_numbers_second_kind.test.cpp
       title: Verify/LC_stirling_numbers_second_kind.test.cpp
 layout: toppage

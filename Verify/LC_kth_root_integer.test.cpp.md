@@ -1,31 +1,31 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
-    path: Math/prime_factor.hpp
-    title: Math/prime_factor.hpp
+  - icon: ':heavy_check_mark:'
+    path: Math/kth-root-integer.hpp
+    title: Math/kth-root-integer.hpp
   - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
+    PROBLEM: https://judge.yosupo.jp/problem/kth_root_integer
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
-  bundledCode: "#line 1 \"Verify/LC_prime_factorization_2.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\n\n#line\
-    \ 1 \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n#include\
-    \ <cstdio>\n#include <cmath>\n#include <ctime>\n#include <cstdlib>\n#include <cassert>\n\
-    #include <vector>\n#include <list>\n#include <stack>\n#include <queue>\n#include\
-    \ <deque>\n#include <map>\n#include <set>\n#include <bitset>\n#include <string>\n\
-    #include <algorithm>\n#include <utility>\n#include <complex>\n#include <array>\n\
-    #include <random>\n#include <climits>\n#include <unordered_set>\n#include <unordered_map>\n\
-    using namespace std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n\
+    - https://judge.yosupo.jp/problem/kth_root_integer
+  bundledCode: "#line 1 \"Verify/LC_kth_root_integer.test.cpp\"\n#define PROBLEM \"\
+    https://judge.yosupo.jp/problem/kth_root_integer\"\n\n#line 1 \"Template/template.hpp\"\
+    \n#include <iostream>\n#include <iomanip>\n#include <cstdio>\n#include <cmath>\n\
+    #include <ctime>\n#include <cstdlib>\n#include <cassert>\n#include <vector>\n\
+    #include <list>\n#include <stack>\n#include <queue>\n#include <deque>\n#include\
+    \ <map>\n#include <set>\n#include <bitset>\n#include <string>\n#include <algorithm>\n\
+    #include <utility>\n#include <complex>\n#include <array>\n#include <random>\n\
+    #include <climits>\n#include <unordered_set>\n#include <unordered_map>\nusing\
+    \ namespace std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n\
     #define per(x, s, t) for (ll x = (s); (x) >= (t); (x)--)\n#define reps(x, s) for\
     \ (ll x = 0; (x) < (ll)(s).size(); (x)++)\n#define chmin(x, y) (x) = min((x),\
     \ (y))\n#define chmax(x, y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n\
@@ -54,33 +54,34 @@ data:
     \ f) : F(forward< F >(f)) {}\n\n  template< typename... Args >\n  decltype(auto)\
     \ operator()(Args &&... args) const {\n    return F::operator()(*this, forward<\
     \ Args >(args)...);\n  }\n};\n\ntemplate< typename F >\ninline decltype(auto)\
-    \ MFP(F&& f) {\n  return FixPoint< F >{forward< F >(f)};\n}\n#line 1 \"Math/prime_factor.hpp\"\
-    \nmap<uint64_t, int> prime_factor(uint64_t n) {\n  map<uint64_t, int> ret;\n \
-    \ for (uint64_t i = 2; i * i <= n; i++) {\n    while (n % i == 0) {\n      ret[i]++;\n\
-    \      n /= i;\n    }\n  }\n  if (n != 1) ret[n] = 1;\n  return ret;\n}\n#line\
-    \ 5 \"Verify/LC_prime_factorization_2.test.cpp\"\n\nint main() {\n  fastio;\n\n\
-    \  uint32_t N;\n  cin >> N;\n\n  auto factors = prime_factor(N);\n  cout << N\
-    \ << \":\";\n  for (auto& [t, cnt] : factors) {\n    while (cnt--)\n      cout\
-    \ << \" \" << t;\n  }\n  cout << nl;\n\n  return 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
-    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/prime_factor.hpp\"\
-    \n\nint main() {\n  fastio;\n\n  uint32_t N;\n  cin >> N;\n\n  auto factors =\
-    \ prime_factor(N);\n  cout << N << \":\";\n  for (auto& [t, cnt] : factors) {\n\
-    \    while (cnt--)\n      cout << \" \" << t;\n  }\n  cout << nl;\n\n  return\
-    \ 0;\n}\n"
+    \ MFP(F&& f) {\n  return FixPoint< F >{forward< F >(f)};\n}\n#line 1 \"Math/kth-root-integer.hpp\"\
+    \n// return floor( a^(1/k) )\nuint64_t kth_root_integer(uint64_t a, int k) {\n\
+    \  if (k == 1) return a;\n  auto check = [&](uint32_t x) {\n    uint64_t mul =\
+    \ 1;\n    for (int j = 0; j < k; j++) {\n      if (__builtin_mul_overflow(mul,\
+    \ x, &mul)) return false;\n    }\n    return mul <= a;\n  };\n  uint64_t ret =\
+    \ 0;\n  for (int i = 31; i >= 0; i--) {\n    if (check(ret | (1u << i))) ret |=\
+    \ 1u << i;\n  }\n  return ret;\n}\n#line 5 \"Verify/LC_kth_root_integer.test.cpp\"\
+    \n\nint main() {\n  int T;\n  cin >> T;\n  while (T--) {\n    uint64_t a;\n  \
+    \  int k;\n    cin >> a >> k;\n    cout << kth_root_integer(a, k) << nl;\n  }\n\
+    }\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/kth_root_integer\"\n\n\
+    #include \"../Template/template.hpp\"\n#include \"../Math/kth-root-integer.hpp\"\
+    \n\nint main() {\n  int T;\n  cin >> T;\n  while (T--) {\n    uint64_t a;\n  \
+    \  int k;\n    cin >> a >> k;\n    cout << kth_root_integer(a, k) << nl;\n  }\n\
+    }"
   dependsOn:
   - Template/template.hpp
-  - Math/prime_factor.hpp
+  - Math/kth-root-integer.hpp
   isVerificationFile: true
-  path: Verify/LC_prime_factorization_2.test.cpp
+  path: Verify/LC_kth_root_integer.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 14:29:14+02:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-05-18 14:47:32+02:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Verify/LC_prime_factorization_2.test.cpp
+documentation_of: Verify/LC_kth_root_integer.test.cpp
 layout: document
 redirect_from:
-- /verify/Verify/LC_prime_factorization_2.test.cpp
-- /verify/Verify/LC_prime_factorization_2.test.cpp.html
-title: Verify/LC_prime_factorization_2.test.cpp
+- /verify/Verify/LC_kth_root_integer.test.cpp
+- /verify/Verify/LC_kth_root_integer.test.cpp.html
+title: Verify/LC_kth_root_integer.test.cpp
 ---

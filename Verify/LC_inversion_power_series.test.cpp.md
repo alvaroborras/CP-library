@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Math/formal-power-series-friendly-ntt.hpp
     title: Math/formal-power-series-friendly-ntt.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Math/modint.hpp
     title: Math/modint.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Math/number-theoretic-transform-friendly-mod-int.hpp
     title: Math/number-theoretic-transform-friendly-mod-int.hpp
   - icon: ':question:'
@@ -30,14 +30,14 @@ data:
     \ <vector>\n#include <list>\n#include <stack>\n#include <queue>\n#include <deque>\n\
     #include <map>\n#include <set>\n#include <bitset>\n#include <string>\n#include\
     \ <algorithm>\n#include <utility>\n#include <complex>\n#include <array>\n#include\
-    \ <random>\n#include <unordered_set>\n#include <unordered_map>\nusing namespace\
-    \ std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n#define per(x,\
-    \ s, t) for (ll x = (s); (x) >= (t); (x)--)\n#define reps(x, s) for (ll x = 0;\
-    \ (x) < (ll)(s).size(); (x)++)\n#define chmin(x, y) (x) = min((x), (y))\n#define\
-    \ chmax(x, y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n#define all(x)\
-    \ (x).begin(), (x).end()\n#define rall(x) (x).rbegin(), (x).rend()\n#define outl(...)\
-    \ dump_func(__VA_ARGS__)\n#define outf(x) cout << fixed << setprecision(16) <<\
-    \ (x) << nl\n#define fastio ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)\n\
+    \ <random>\n#include <climits>\n#include <unordered_set>\n#include <unordered_map>\n\
+    using namespace std;\n\n#define rep(x, s, t) for (ll x = (s); (x) <= (t); (x)++)\n\
+    #define per(x, s, t) for (ll x = (s); (x) >= (t); (x)--)\n#define reps(x, s) for\
+    \ (ll x = 0; (x) < (ll)(s).size(); (x)++)\n#define chmin(x, y) (x) = min((x),\
+    \ (y))\n#define chmax(x, y) (x) = max((x), (y))\n#define sz(x) ((ll)(x).size())\n\
+    #define all(x) (x).begin(), (x).end()\n#define rall(x) (x).rbegin(), (x).rend()\n\
+    #define outl(...) dump_func(__VA_ARGS__)\n#define outf(x) cout << fixed << setprecision(16)\
+    \ << (x) << nl\n#define fastio ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)\n\
     #define nl \"\\n\"\n#define pb push_back\n#define fi first\n#define se second\n\
     #define inf 2e18\n#define eps 1e-9\nconst double PI = 3.1415926535897932384626433;\n\
     \ntypedef long long ll;\ntypedef unsigned long long ull;\ntypedef pair<ll, ll>\
@@ -298,7 +298,7 @@ data:
   isVerificationFile: true
   path: Verify/LC_inversion_power_series.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 08:11:38+02:00'
+  timestamp: '2022-05-18 14:29:14+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Verify/LC_inversion_power_series.test.cpp

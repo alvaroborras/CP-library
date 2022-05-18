@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_stirling_numbers_second_kind.test.cpp
     title: Verify/LC_stirling_numbers_second_kind.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/stirling-second.hpp\"\ntemplate<template<typename>\
@@ -27,7 +27,7 @@ data:
   path: Math/stirling-second.hpp
   requiredBy: []
   timestamp: '2022-05-17 18:28:09+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/LC_stirling_numbers_second_kind.test.cpp
 documentation_of: Math/stirling-second.hpp

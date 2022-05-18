@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: Verify/LC_counting_primes.test.cpp
     title: Verify/LC_counting_primes.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_kth_root_integer.test.cpp
+    title: Verify/LC_kth_root_integer.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -35,6 +38,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/LC_counting_primes.test.cpp
+  - Verify/LC_kth_root_integer.test.cpp
 documentation_of: Math/kth-root-integer.hpp
 layout: document
 redirect_from:

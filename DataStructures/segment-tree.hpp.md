@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Verify/AIZU_range-min-query.test.cpp
     title: Verify/AIZU_range-min-query.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructures/segment-tree.hpp\"\ntemplate<typename T,\
@@ -87,7 +87,7 @@ data:
   path: DataStructures/segment-tree.hpp
   requiredBy: []
   timestamp: '2022-05-18 13:42:44+02:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Verify/AIZU_range-min-query.test.cpp
 documentation_of: DataStructures/segment-tree.hpp

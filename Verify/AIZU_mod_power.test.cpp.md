@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: Math/divisors.hpp
-    title: Math/divisors.hpp
+  - icon: ':question:'
+    path: Math/modint.hpp
+    title: Math/modint.hpp
   - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
@@ -14,10 +14,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D
-  bundledCode: "#line 1 \"Verify/AIZU_divisors.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D\"\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B
+  bundledCode: "#line 1 \"Verify/AIZU_mod_power.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
     \n\n#line 1 \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n\
     #include <cstdio>\n#include <cmath>\n#include <ctime>\n#include <cstdlib>\n#include\
     \ <cassert>\n#include <vector>\n#include <list>\n#include <stack>\n#include <queue>\n\
@@ -54,32 +54,50 @@ data:
     \ typename... Args >\n  decltype(auto) operator()(Args &&... args) const {\n \
     \   return F::operator()(*this, forward< Args >(args)...);\n  }\n};\n\ntemplate<\
     \ typename F >\ninline decltype(auto) MFP(F&& f) {\n  return FixPoint< F >{forward<\
-    \ F >(f)};\n}\n#line 1 \"Math/divisors.hpp\"\n// return a vector containing the\
-    \ divisors of n\nvector<uint64_t> divisor(uint64_t n) {\n  vector<uint64_t> ret;\n\
-    \  for (uint64_t i = 1; i * i <= n; i++) {\n    if (n % i == 0) {\n      ret.push_back(i);\n\
-    \      if (i * i != n) ret.push_back(n / i);\n    }\n  }\n  sort(begin(ret), end(ret));\n\
-    \  return ret;\n}\n#line 5 \"Verify/AIZU_divisors.test.cpp\"\n\nint main() {\n\
-    \  fastio;\n\n  uint64_t A, B, C;\n  cin >> A >> B >> C;\n  uint32_t ret = 0;\n\
-    \  for (uint64_t& p : divisor(C)) {\n    ret += A <= p and p <= B;\n  }\n  cout\
-    \ << ret << nl;\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_3_D\"\
-    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/divisors.hpp\"\n\
-    \nint main() {\n  fastio;\n\n  uint64_t A, B, C;\n  cin >> A >> B >> C;\n  uint32_t\
-    \ ret = 0;\n  for (uint64_t& p : divisor(C)) {\n    ret += A <= p and p <= B;\n\
-    \  }\n  cout << ret << nl;\n}"
+    \ F >(f)};\n}\n#line 1 \"Math/modint.hpp\"\ntemplate<int mod>\nstruct ModInt {\n\
+    \  int x;\n\n  ModInt() : x(0) {}\n\n  ModInt(int64_t y) : x(y >= 0?y % mod:(mod\
+    \ - (-y) % mod) % mod) {}\n\n  ModInt& operator+=(const ModInt& p) {\n    if ((x\
+    \ += p.x) >= mod) x -= mod;\n    return *this;\n  }\n\n  ModInt& operator-=(const\
+    \ ModInt& p) {\n    if ((x += mod - p.x) >= mod) x -= mod;\n    return *this;\n\
+    \  }\n\n  ModInt& operator*=(const ModInt& p) {\n    x = (int)(1LL * x * p.x %\
+    \ mod);\n    return *this;\n  }\n\n  ModInt& operator/=(const ModInt& p) {\n \
+    \   *this *= p.inverse();\n    return *this;\n  }\n\n  ModInt operator-() const\
+    \ { return ModInt(-x); }\n\n  ModInt operator+(const ModInt& p) const { return\
+    \ ModInt(*this) += p; }\n\n  ModInt operator-(const ModInt& p) const { return\
+    \ ModInt(*this) -= p; }\n\n  ModInt operator*(const ModInt& p) const { return\
+    \ ModInt(*this) *= p; }\n\n  ModInt operator/(const ModInt& p) const { return\
+    \ ModInt(*this) /= p; }\n\n  bool operator==(const ModInt& p) const { return x\
+    \ == p.x; }\n\n  bool operator!=(const ModInt& p) const { return x != p.x; }\n\
+    \n  ModInt inverse() const {\n    int a = x, b = mod, u = 1, v = 0, t;\n    while\
+    \ (b > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u -= t *\
+    \ v, v);\n    }\n    return ModInt(u);\n  }\n\n  ModInt pow(int64_t n) const {\n\
+    \    ModInt ret(1), mul(x);\n    while (n > 0) {\n      if (n & 1) ret *= mul;\n\
+    \      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n  }\n\n  friend ostream&\
+    \ operator<<(ostream& os, const ModInt& p) {\n    return os << p.x;\n  }\n\n \
+    \ friend istream& operator>>(istream& is, ModInt& a) {\n    int64_t t;\n    is\
+    \ >> t;\n    a = ModInt<mod>(t);\n    return (is);\n  }\n\n  static int get_mod()\
+    \ { return mod; }\n};\n\nusing modint = ModInt<mod>;\n#line 5 \"Verify/AIZU_mod_power.test.cpp\"\
+    \n\nconst int MOD = 1000000007;\nusing mint = ModInt<MOD>;\n\nint main() {\n \
+    \ fastio;\n\n  mint n;\n  int64_t m;\n  cin >> n >> m;\n\n  cout << n.pow(m) <<\
+    \ nl;\n  return 0;\n}\n"
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_B\"\
+    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/modint.hpp\"\n\n\
+    const int MOD = 1000000007;\nusing mint = ModInt<MOD>;\n\nint main() {\n  fastio;\n\
+    \n  mint n;\n  int64_t m;\n  cin >> n >> m;\n\n  cout << n.pow(m) << nl;\n  return\
+    \ 0;\n}"
   dependsOn:
   - Template/template.hpp
-  - Math/divisors.hpp
+  - Math/modint.hpp
   isVerificationFile: true
-  path: Verify/AIZU_divisors.test.cpp
+  path: Verify/AIZU_mod_power.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 14:29:14+02:00'
+  timestamp: '2022-05-18 14:40:12+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Verify/AIZU_divisors.test.cpp
+documentation_of: Verify/AIZU_mod_power.test.cpp
 layout: document
 redirect_from:
-- /verify/Verify/AIZU_divisors.test.cpp
-- /verify/Verify/AIZU_divisors.test.cpp.html
-title: Verify/AIZU_divisors.test.cpp
+- /verify/Verify/AIZU_mod_power.test.cpp
+- /verify/Verify/AIZU_mod_power.test.cpp.html
+title: Verify/AIZU_mod_power.test.cpp
 ---

@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: DataStructures/dualsegtree.hpp
-    title: DataStructures/dualsegtree.hpp
+    path: Math/extgcd.hpp
+    title: Math/extgcd.hpp
   - icon: ':question:'
     path: Template/template.hpp
     title: Template/template.hpp
@@ -14,12 +14,12 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
-  bundledCode: "#line 1 \"Verify/AIZU_range_update_query.test.cpp\"\n#define PROBLEM\
-    \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\n\n#line\
-    \ 1 \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n#include\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E
+  bundledCode: "#line 1 \"Verify/AIZU_extended_gcd.test.cpp\"\n#define PROBLEM \"\
+    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E\"\n\n#line 1\
+    \ \"Template/template.hpp\"\n#include <iostream>\n#include <iomanip>\n#include\
     \ <cstdio>\n#include <cmath>\n#include <ctime>\n#include <cstdlib>\n#include <cassert>\n\
     #include <vector>\n#include <list>\n#include <stack>\n#include <queue>\n#include\
     \ <deque>\n#include <map>\n#include <set>\n#include <bitset>\n#include <string>\n\
@@ -54,50 +54,31 @@ data:
     \ f) : F(forward< F >(f)) {}\n\n  template< typename... Args >\n  decltype(auto)\
     \ operator()(Args &&... args) const {\n    return F::operator()(*this, forward<\
     \ Args >(args)...);\n  }\n};\n\ntemplate< typename F >\ninline decltype(auto)\
-    \ MFP(F&& f) {\n  return FixPoint< F >{forward< F >(f)};\n}\n#line 1 \"DataStructures/dualsegtree.hpp\"\
-    \n/**\n * Range Update Query (dual segment tree)\n */\ntemplate< typename E, typename\
-    \ H >\nstruct DualSegmentTree {\n  int sz, height;\n  vector< E > lazy;\n  const\
-    \ H h;\n  const E ei;\n\n  DualSegmentTree(int n, const H h, const E& ei) : h(h),\
-    \ ei(ei) {\n    sz = 1;\n    height = 0;\n    while (sz < n) sz <<= 1, height++;\n\
-    \    lazy.assign(2 * sz, ei);\n  }\n\n  inline void propagate(int k) {\n    if\
-    \ (lazy[k] != ei) {\n      lazy[2 * k + 0] = h(lazy[2 * k + 0], lazy[k]);\n  \
-    \    lazy[2 * k + 1] = h(lazy[2 * k + 1], lazy[k]);\n      lazy[k] = ei;\n   \
-    \ }\n  }\n\n  inline void thrust(int k) {\n    for (int i = height; i > 0; i--)\
-    \ propagate(k >> i);\n  }\n\n  void update(int a, int b, const E& x) {\n    thrust(a\
-    \ += sz);\n    thrust(b += sz - 1);\n    for (int l = a, r = b + 1; l < r; l >>=\
-    \ 1, r >>= 1) {\n      if (l & 1) lazy[l] = h(lazy[l], x), ++l;\n      if (r &\
-    \ 1) --r, lazy[r] = h(lazy[r], x);\n    }\n  }\n\n  E operator[](int k) {\n  \
-    \  thrust(k += sz);\n    return lazy[k];\n  }\n};\n\ntemplate< typename E, typename\
-    \ H >\nDualSegmentTree< E, H > get_dual_segment_tree(int N, const H& h, const\
-    \ E& ei) {\n  return { N, h, ei };\n}\n#line 5 \"Verify/AIZU_range_update_query.test.cpp\"\
-    \n\nint main() {\n  int N, Q;\n  cin >> N >> Q;\n  auto h = [](int32_t a, int32_t\
-    \ b) { return b; };\n  auto seg = get_dual_segment_tree(N, h, INT32_MAX);\n\n\
-    \  int32_t T, X, L, R, K;\n  while (Q--) {\n    cin >> T;\n    if (T == 0) {\n\
-    \      // Update seg[l ... r] = x\n      cin >> L >> R >> X;\n      seg.update(L,\
-    \ R + 1, X);\n    }\n    else if (T == 1) {\n      // Obtain element seg[k]\n\
-    \      cin >> K;\n      cout << seg[K] << \"\\n\";\n    }\n  }\n  return 0;\n\
-    }\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\"\
-    \n\n#include \"../Template/template.hpp\"\n#include \"../DataStructures/dualsegtree.hpp\"\
-    \n\nint main() {\n  int N, Q;\n  cin >> N >> Q;\n  auto h = [](int32_t a, int32_t\
-    \ b) { return b; };\n  auto seg = get_dual_segment_tree(N, h, INT32_MAX);\n\n\
-    \  int32_t T, X, L, R, K;\n  while (Q--) {\n    cin >> T;\n    if (T == 0) {\n\
-    \      // Update seg[l ... r] = x\n      cin >> L >> R >> X;\n      seg.update(L,\
-    \ R + 1, X);\n    }\n    else if (T == 1) {\n      // Obtain element seg[k]\n\
-    \      cin >> K;\n      cout << seg[K] << \"\\n\";\n    }\n  }\n  return 0;\n}"
+    \ MFP(F&& f) {\n  return FixPoint< F >{forward< F >(f)};\n}\n#line 1 \"Math/extgcd.hpp\"\
+    \n/*\n  Given (a, b) find the solution (x, y) to the equation a x + b y = gcd(a,\
+    \ b)\n  If there are many, this returns the one such that |x| + |y| is minimal,\
+    \ and x <= y\n*/\ntemplate<typename T>\nT extgcd(T a, T b, T& x, T& y) {\n  T\
+    \ d = a;\n  if (b != 0) {\n    d = extgcd(b, a % b, y, x);\n    y -= (a / b) *\
+    \ x;\n  }\n  else {\n    x = 1;\n    y = 0;\n  }\n  return d;\n}\n#line 5 \"Verify/AIZU_extended_gcd.test.cpp\"\
+    \n\nint main() {\n  int a, b;\n  cin >> a >> b;\n  int x, y;\n  extgcd(a, b, x,\
+    \ y);\n  cout << x << \" \" << y << nl;\n}\n"
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_E\"\
+    \n\n#include \"../Template/template.hpp\"\n#include \"../Math/extgcd.hpp\"\n\n\
+    int main() {\n  int a, b;\n  cin >> a >> b;\n  int x, y;\n  extgcd(a, b, x, y);\n\
+    \  cout << x << \" \" << y << nl;\n}"
   dependsOn:
   - Template/template.hpp
-  - DataStructures/dualsegtree.hpp
+  - Math/extgcd.hpp
   isVerificationFile: true
-  path: Verify/AIZU_range_update_query.test.cpp
+  path: Verify/AIZU_extended_gcd.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 14:29:14+02:00'
+  timestamp: '2022-05-18 14:46:43+02:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: Verify/AIZU_range_update_query.test.cpp
+documentation_of: Verify/AIZU_extended_gcd.test.cpp
 layout: document
 redirect_from:
-- /verify/Verify/AIZU_range_update_query.test.cpp
-- /verify/Verify/AIZU_range_update_query.test.cpp.html
-title: Verify/AIZU_range_update_query.test.cpp
+- /verify/Verify/AIZU_extended_gcd.test.cpp
+- /verify/Verify/AIZU_extended_gcd.test.cpp.html
+title: Verify/AIZU_extended_gcd.test.cpp
 ---
