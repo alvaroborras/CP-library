@@ -4,6 +4,9 @@ data:
   - name: DataStructures
     pages:
     - icon: ':heavy_check_mark:'
+      path: DataStructures/binary-indexed-tree.hpp
+      title: DataStructures/binary-indexed-tree.hpp
+    - icon: ':heavy_check_mark:'
       path: DataStructures/dualsegtree.hpp
       title: Dual Segment Tree
     - icon: ':heavy_check_mark:'
@@ -98,6 +101,9 @@ data:
     - icon: ':x:'
       path: Verify/AIZU_range-min-query.test.cpp
       title: Verify/AIZU_range-min-query.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_range_sum_query.test.cpp
+      title: Verify/AIZU_range_sum_query.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_union_find.test.cpp
       title: Verify/AIZU_union_find.test.cpp

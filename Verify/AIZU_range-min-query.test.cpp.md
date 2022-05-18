@@ -92,23 +92,25 @@ data:
     \ T& ti) {\n  return SegmentTree{ v, f, ti };\n}\n#line 5 \"Verify/AIZU_range-min-query.test.cpp\"\
     \n\nint main() {\n  fastio;\n\n  uint32_t N, Q;\n  cin >> N >> Q;\n\n  auto seg\
     \ = get_segment_tree(N, [](uint32_t a, uint32_t b) { return min(a, b); }, INT_MAX);\n\
-    \n  uint32_t T, X, Y;\n  while (Q--) {\n    cin >> T >> X >> Y;\n    if (T ==\
-    \ 0)\n      seg.set(X, Y);\n    else\n      cout << seg.prod(X, Y + 1) << nl;\n\
-    \  }\n}\n"
+    \n  /*\n    This data structure has two operations:\n      1. Set element seg[X]\
+    \ = Y\n      2. Obtain the minimum of {seg[X], ..., seg[Y]}\n  */\n\n  uint32_t\
+    \ T, X, Y;\n  while (Q--) {\n    cin >> T >> X >> Y;\n    if (T == 0)\n      seg.set(X,\
+    \ Y);\n    else\n      cout << seg.prod(X, Y + 1) << nl;\n  }\n}\n\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A\"\
     \n\n#include \"../Template/template.hpp\"\n#include \"../DataStructures/segment-tree.hpp\"\
     \n\nint main() {\n  fastio;\n\n  uint32_t N, Q;\n  cin >> N >> Q;\n\n  auto seg\
     \ = get_segment_tree(N, [](uint32_t a, uint32_t b) { return min(a, b); }, INT_MAX);\n\
-    \n  uint32_t T, X, Y;\n  while (Q--) {\n    cin >> T >> X >> Y;\n    if (T ==\
-    \ 0)\n      seg.set(X, Y);\n    else\n      cout << seg.prod(X, Y + 1) << nl;\n\
-    \  }\n}"
+    \n  /*\n    This data structure has two operations:\n      1. Set element seg[X]\
+    \ = Y\n      2. Obtain the minimum of {seg[X], ..., seg[Y]}\n  */\n\n  uint32_t\
+    \ T, X, Y;\n  while (Q--) {\n    cin >> T >> X >> Y;\n    if (T == 0)\n      seg.set(X,\
+    \ Y);\n    else\n      cout << seg.prod(X, Y + 1) << nl;\n  }\n}\n\n"
   dependsOn:
   - Template/template.hpp
   - DataStructures/segment-tree.hpp
   isVerificationFile: true
   path: Verify/AIZU_range-min-query.test.cpp
   requiredBy: []
-  timestamp: '2022-05-18 13:42:44+02:00'
+  timestamp: '2022-05-18 13:53:14+02:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Verify/AIZU_range-min-query.test.cpp

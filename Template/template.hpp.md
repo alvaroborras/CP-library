@@ -25,6 +25,9 @@ data:
     path: Verify/AIZU_range-min-query.test.cpp
     title: Verify/AIZU_range-min-query.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/AIZU_range_sum_query.test.cpp
+    title: Verify/AIZU_range_sum_query.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/AIZU_union_find.test.cpp
     title: Verify/AIZU_union_find.test.cpp
   - icon: ':heavy_check_mark:'
@@ -158,6 +161,7 @@ data:
   - Verify/LC_power_formal_series.test.cpp
   - Verify/AIZU_weighted_union_find.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
+  - Verify/AIZU_range_sum_query.test.cpp
   - Verify/AIZU_union_find.test.cpp
   - Verify/AIZU_bigInt_multiplication2.test.cpp
   - Verify/LC_stirling_numbers_second_kind.test.cpp
