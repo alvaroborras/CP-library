@@ -7,6 +7,9 @@ data:
     title: Verify/LC_convolution_mod.test_3.cpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Verify/AIZU_MST.test.cpp
+    title: Verify/AIZU_MST.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/AIZU_bigInt_addition.test.cpp
     title: Verify/AIZU_bigInt_addition.test.cpp
   - icon: ':heavy_check_mark:'
@@ -199,6 +202,7 @@ data:
   - Verify/AIZU_range-min-query.test.cpp
   - Verify/AIZU_weighted_union_find.test.cpp
   - Verify/LC_prime_factorization.test.cpp
+  - Verify/AIZU_MST.test.cpp
   - Verify/AIZU_bigInt_addition.test.cpp
   - Verify/AIZU_divisors.test.cpp
   - Verify/LC_polynomial_taylor_shift.test.cpp

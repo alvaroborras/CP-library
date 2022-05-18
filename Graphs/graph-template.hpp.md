@@ -3,9 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: Graphs/prim-mst.hpp
+    title: Graphs/prim-mst.hpp
+  - icon: ':heavy_check_mark:'
     path: Graphs/strongly-connected-components.hpp
     title: Graphs/strongly-connected-components.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Verify/AIZU_MST.test.cpp
+    title: Verify/AIZU_MST.test.cpp
   - icon: ':heavy_check_mark:'
     path: Verify/LC_strongly_connected_components.test.cpp
     title: Verify/LC_strongly_connected_components.test.cpp
@@ -53,10 +59,12 @@ data:
   isVerificationFile: false
   path: Graphs/graph-template.hpp
   requiredBy:
+  - Graphs/prim-mst.hpp
   - Graphs/strongly-connected-components.hpp
   timestamp: '2022-05-18 16:08:10+02:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - Verify/AIZU_MST.test.cpp
   - Verify/LC_strongly_connected_components.test.cpp
 documentation_of: Graphs/graph-template.hpp
 layout: document

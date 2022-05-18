@@ -33,6 +33,9 @@ data:
       path: Graphs/graph-template.hpp
       title: Graphs/graph-template.hpp
     - icon: ':heavy_check_mark:'
+      path: Graphs/prim-mst.hpp
+      title: Graphs/prim-mst.hpp
+    - icon: ':heavy_check_mark:'
       path: Graphs/strongly-connected-components.hpp
       title: Graphs/strongly-connected-components.hpp
     - icon: ':warning:'
@@ -117,6 +120,9 @@ data:
   verificationCategories:
   - name: Verify
     pages:
+    - icon: ':heavy_check_mark:'
+      path: Verify/AIZU_MST.test.cpp
+      title: Verify/AIZU_MST.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/AIZU_bigInt_addition.test.cpp
       title: Verify/AIZU_bigInt_addition.test.cpp
