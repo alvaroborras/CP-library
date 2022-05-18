@@ -29,5 +29,6 @@
 "Verify/LC_prime_factorization.test.cpp": "2022-05-18 14:29:14 +0200",
 "Verify/LC_prime_factorization_2.test.cpp": "2022-05-18 14:29:14 +0200",
 "Verify/LC_static_range_sum.test.cpp": "2022-05-18 14:29:14 +0200",
-"Verify/LC_stirling_numbers_second_kind.test.cpp": "2022-05-18 14:29:14 +0200"
+"Verify/LC_stirling_numbers_second_kind.test.cpp": "2022-05-18 14:29:14 +0200",
+"Verify/LC_strongly_connected_components.test.cpp": "2022-05-18 16:08:10 +0200"
 }
