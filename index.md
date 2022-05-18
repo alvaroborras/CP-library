@@ -27,6 +27,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructures/weighted-union-find.hpp
       title: DataStructures/weighted-union-find.hpp
+  - name: Graphs
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: Graphs/graph-template.hpp
+      title: Graphs/graph-template.hpp
+    - icon: ':heavy_check_mark:'
+      path: Graphs/strongly-connected-components.hpp
+      title: Graphs/strongly-connected-components.hpp
+    - icon: ':warning:'
+      path: Graphs/topological-sort.hpp
+      title: Graphs/topological-sort.hpp
   - name: Math
     pages:
     - icon: ':heavy_check_mark:'
@@ -199,5 +210,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_stirling_numbers_second_kind.test.cpp
       title: Verify/LC_stirling_numbers_second_kind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_strongly_connected_components.test.cpp
+      title: Verify/LC_strongly_connected_components.test.cpp
 layout: toppage
 ---

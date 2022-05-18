@@ -99,6 +99,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: Verify/LC_stirling_numbers_second_kind.test.cpp
     title: Verify/LC_stirling_numbers_second_kind.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Verify/LC_strongly_connected_components.test.cpp
+    title: Verify/LC_strongly_connected_components.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -211,6 +214,7 @@ data:
   - Verify/LC_convolution_mod.test.cpp
   - Verify/LC_static_range_sum.test.cpp
   - Verify/LC_power_formal_series.test.cpp
+  - Verify/LC_strongly_connected_components.test.cpp
   - Verify/LC_enumerate_primes.test.cpp
   - Verify/AIZU_bigInt_modulo.test.cpp
   - Verify/AIZU_extended_gcd.test.cpp
