@@ -1,54 +1,48 @@
-
-template <typename M, M(*f)(M, M), M(*m1)()> class DualSegmentTree {
+/**
+ * Range Update Query (dual segment tree)
+ */
+template< typename E, typename H >
+struct DualSegmentTree {
   int sz, height;
-  vector<M> data;
-  void down(int k) {
-    data[k * 2] = f(data[k * 2], data[k]);
-    data[k * 2 + 1] = f(data[k * 2 + 1], data[k]);
-    data[k] = m1();
+  vector< E > lazy;
+  const H h;
+  const E ei;
+
+  DualSegmentTree(int n, const H h, const E& ei) : h(h), ei(ei) {
+    sz = 1;
+    height = 0;
+    while (sz < n) sz <<= 1, height++;
+    lazy.assign(2 * sz, ei);
   }
 
-public:
-  DualSegmentTree(int n) {
-    sz = 1, height = 0;
-    while (sz < n)
-      sz <<= 1, height++;
-    data.assign(2 * sz, m1());
-  }
-  void run(vector<M>& v) {
-    for (int i = 0; i < (int)v.size(); i++)
-      data[i + sz] = v[i];
-  }
-  void update(int a, int b, M x) {
-    if (a >= b)
-      return;
-    a += sz, b += sz;
-    for (int i = height; i; i--) {
-      if (((a >> i) << i) != a)
-        down(a >> i);
-      if (((b >> i) << i) != b)
-        down((b - 1) >> i);
-    }
-    for (; a < b; a >>= 1, b >>= 1) {
-      if (a & 1)
-        data[a] = f(data[a], x), a++;
-      if (b & 1)
-        --b, data[b] = f(data[b], x);
+  inline void propagate(int k) {
+    if (lazy[k] != ei) {
+      lazy[2 * k + 0] = h(lazy[2 * k + 0], lazy[k]);
+      lazy[2 * k + 1] = h(lazy[2 * k + 1], lazy[k]);
+      lazy[k] = ei;
     }
   }
-  M query(int k) {
-    k += sz;
-    for (int i = height; i; i--) {
-      if (((k >> i) << i) != k)
-        down(k >> i);
+
+  inline void thrust(int k) {
+    for (int i = height; i > 0; i--) propagate(k >> i);
+  }
+
+  void update(int a, int b, const E& x) {
+    thrust(a += sz);
+    thrust(b += sz - 1);
+    for (int l = a, r = b + 1; l < r; l >>= 1, r >>= 1) {
+      if (l & 1) lazy[l] = h(lazy[l], x), ++l;
+      if (r & 1) --r, lazy[r] = h(lazy[r], x);
     }
-    M ret = data[k];
-    while (k >>= 1)
-      ret = f(ret, data[k]);
-    return ret;
+  }
+
+  E operator[](int k) {
+    thrust(k += sz);
+    return lazy[k];
   }
 };
 
-/**
- * @brief Dual Segment Tree
- */
+template< typename E, typename H >
+DualSegmentTree< E, H > get_dual_segment_tree(int N, const H& h, const E& ei) {
+  return { N, h, ei };
+}
