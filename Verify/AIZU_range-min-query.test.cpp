@@ -11,6 +11,12 @@ int main() {
 
   auto seg = get_segment_tree(N, [](uint32_t a, uint32_t b) { return min(a, b); }, INT_MAX);
 
+  /*
+    This data structure has two operations:
+      1. Set element seg[X] = Y
+      2. Obtain the minimum of {seg[X], ..., seg[Y]}
+  */
+
   uint32_t T, X, Y;
   while (Q--) {
     cin >> T >> X >> Y;
@@ -20,3 +26,4 @@ int main() {
       cout << seg.prod(X, Y + 1) << nl;
   }
 }
+
