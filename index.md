@@ -65,7 +65,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Math/prime-table.hpp
       title: Math/prime-table.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Math/prime_factor.hpp
       title: Math/prime_factor.hpp
     - icon: ':heavy_check_mark:'
@@ -158,6 +158,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Verify/LC_prime_factorization.test.cpp
       title: Verify/LC_prime_factorization.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Verify/LC_prime_factorization_2.test.cpp
+      title: Verify/LC_prime_factorization_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: Verify/LC_static_range_sum.test.cpp
       title: Verify/LC_static_range_sum.test.cpp

@@ -73,6 +73,9 @@ data:
     path: Verify/LC_prime_factorization.test.cpp
     title: Verify/LC_prime_factorization.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Verify/LC_prime_factorization_2.test.cpp
+    title: Verify/LC_prime_factorization_2.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Verify/LC_static_range_sum.test.cpp
     title: Verify/LC_static_range_sum.test.cpp
   - icon: ':heavy_check_mark:'
@@ -178,6 +181,7 @@ data:
   - Verify/LC_inversion_power_series.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp
   - Verify/AIZU_range_update_query.test.cpp
+  - Verify/LC_prime_factorization_2.test.cpp
   - Verify/AIZU_range_sum_query.test.cpp
   - Verify/AIZU_bigInt_division.test.cpp
   - Verify/AIZU_bigInt_difference.test.cpp
