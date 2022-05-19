@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graphs/graph-template.hpp
     title: Graphs/graph-template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_MST.test.cpp
     title: Verify/AIZU_MST.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Graphs/prim-mst.hpp\"\n\n#line 2 \"Graphs/graph-template.hpp\"\
@@ -59,7 +59,7 @@ data:
   path: Graphs/prim-mst.hpp
   requiredBy: []
   timestamp: '2022-05-18 16:13:31+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_MST.test.cpp
 documentation_of: Graphs/prim-mst.hpp

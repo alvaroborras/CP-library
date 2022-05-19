@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_prime_factorization_2.test.cpp
     title: Verify/LC_prime_factorization_2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/prime_factor.hpp\"\nmap<uint64_t, int> prime_factor(uint64_t\
@@ -23,7 +23,7 @@ data:
   path: Math/prime_factor.hpp
   requiredBy: []
   timestamp: '2022-05-18 14:27:55+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/LC_prime_factorization_2.test.cpp
 documentation_of: Math/prime_factor.hpp

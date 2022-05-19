@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_union_find.test.cpp
     title: Verify/AIZU_union_find.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructures/union-find.hpp\"\nstruct UnionFind {\n  vector<int>\
@@ -40,7 +40,7 @@ data:
   path: DataStructures/union-find.hpp
   requiredBy: []
   timestamp: '2022-05-17 17:12:10+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_union_find.test.cpp
 documentation_of: DataStructures/union-find.hpp

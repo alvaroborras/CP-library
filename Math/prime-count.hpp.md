@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Math/kth-root-integer.hpp
     title: Math/kth-root-integer.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Math/prime-table.hpp
     title: Math/prime-table.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_counting_primes.test.cpp
     title: Verify/LC_counting_primes.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Math/kth-root-integer.hpp\"\n// return floor( a^(1/k) )\n\
@@ -76,7 +76,7 @@ data:
   path: Math/prime-count.hpp
   requiredBy: []
   timestamp: '2022-05-18 14:20:49+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/LC_counting_primes.test.cpp
 documentation_of: Math/prime-count.hpp

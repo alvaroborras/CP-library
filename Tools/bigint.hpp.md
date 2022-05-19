@@ -3,27 +3,27 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_addition.test.cpp
     title: Verify/AIZU_bigInt_addition.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_difference.test.cpp
     title: Verify/AIZU_bigInt_difference.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_division.test.cpp
     title: Verify/AIZU_bigInt_division.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_modulo.test.cpp
     title: Verify/AIZU_bigInt_modulo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_multiplication.test.cpp
     title: Verify/AIZU_bigInt_multiplication.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_bigInt_multiplication2.test.cpp
     title: Verify/AIZU_bigInt_multiplication2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Tools/bigint.hpp\"\n\nstruct bigint {\n  using vll = vector<ll>;\n\
@@ -245,7 +245,7 @@ data:
   path: Tools/bigint.hpp
   requiredBy: []
   timestamp: '2022-05-17 16:42:23+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_bigInt_addition.test.cpp
   - Verify/AIZU_bigInt_multiplication.test.cpp

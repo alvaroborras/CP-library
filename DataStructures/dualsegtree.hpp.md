@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_range_update_query.test.cpp
     title: Verify/AIZU_range_update_query.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructures/dualsegtree.hpp\"\n/**\n * Range Update Query\
@@ -47,7 +47,7 @@ data:
   path: DataStructures/dualsegtree.hpp
   requiredBy: []
   timestamp: '2022-05-18 14:08:29+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_range_update_query.test.cpp
 documentation_of: DataStructures/dualsegtree.hpp

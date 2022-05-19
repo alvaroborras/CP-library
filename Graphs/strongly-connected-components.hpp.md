@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graphs/graph-template.hpp
     title: Graphs/graph-template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_strongly_connected_components.test.cpp
     title: Verify/LC_strongly_connected_components.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Graphs/graph-template.hpp\"\n\ntemplate<typename T = int>\n\
@@ -74,7 +74,7 @@ data:
   path: Graphs/strongly-connected-components.hpp
   requiredBy: []
   timestamp: '2022-05-18 16:08:10+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/LC_strongly_connected_components.test.cpp
 documentation_of: Graphs/strongly-connected-components.hpp

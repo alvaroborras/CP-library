@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_range_sum_query.test.cpp
     title: Verify/AIZU_range_sum_query.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructures/binary-indexed-tree.hpp\"\ntemplate<typename\
@@ -51,7 +51,7 @@ data:
   path: DataStructures/binary-indexed-tree.hpp
   requiredBy: []
   timestamp: '2022-05-18 13:53:14+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_range_sum_query.test.cpp
 documentation_of: DataStructures/binary-indexed-tree.hpp

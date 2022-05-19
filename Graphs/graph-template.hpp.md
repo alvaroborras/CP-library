@@ -2,22 +2,22 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graphs/prim-mst.hpp
     title: Graphs/prim-mst.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Graphs/strongly-connected-components.hpp
     title: Graphs/strongly-connected-components.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/AIZU_MST.test.cpp
     title: Verify/AIZU_MST.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Verify/LC_strongly_connected_components.test.cpp
     title: Verify/LC_strongly_connected_components.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Graphs/graph-template.hpp\"\n\ntemplate<typename T = int>\n\
@@ -62,7 +62,7 @@ data:
   - Graphs/prim-mst.hpp
   - Graphs/strongly-connected-components.hpp
   timestamp: '2022-05-18 16:08:10+02:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Verify/AIZU_MST.test.cpp
   - Verify/LC_strongly_connected_components.test.cpp
